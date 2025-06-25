@@ -14,75 +14,104 @@
     <meta name="author" content="Pratham Tetgure, Rahul Pawar" />
     <title>Electrosoft Automation</title>
     <link rel="icon" href="assets/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-white text-gray-800">
+  <body class="bg-white text-gray-800 overflow-x-hidden">
     <!-- Navbar -->
-    <header class="bg-blue-500 text-white p-4 shadow-md">
-      <div class="container mx-auto flex justify-between items-center">
+    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+      >
         <h1 class="text-xl font-bold">Electrosoft Automation</h1>
-        <nav class="space-x-4">
-          <a href="index.html" class="hover:underline">Home</a>
-          <a href="about.html" class="hover:underline">About</a>
-          <a href="products.html" class="hover:underline">Products</a>
-          <a href="contact.html" class="hover:underline">Contact</a>
+        <nav class="space-x-6 text-sm font-medium">
+          <a href="#home" class="hover:underline">Home</a>
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#features" class="hover:underline">Features</a>
+          <a href="#contact" class="hover:underline">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gray-100 py-16 text-center">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-extrabold mb-4 text-blue-700">
-          Reliable Electrical Testing Systems
-        </h2>
-        <p class="text-lg text-gray-700 mb-6">
-          Breaker, Motor, and Cable Testing Solutions for Modern Industries
-        </p>
-        <a
-          href="products.html"
-          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full transition"
-          >Explore Our Products</a
-        >
+    <section
+      id="home"
+      class="relative bg-cover bg-center"
+      style="background-image: url('assets/images/transformer-bg.jpg')"
+    >
+      <div class="bg-black bg-opacity-60 py-32 text-center text-white">
+        <div data-aos="fade-down">
+          <h2 class="text-5xl font-extrabold mb-4">
+            Transformer Testing Systems
+          </h2>
+          <p class="text-lg mb-6">Precision. Performance. Trust.</p>
+          <a
+            href="#features"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+            >Explore Features</a
+          >
+        </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4 text-center">
-        <h3 class="text-3xl font-bold mb-10">Why Choose Electrosoft?</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+    <section id="features" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">
+          Why Choose Electrosoft?
+        </h3>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+          >
             <img
-              src="assets/images/manual.png"
-              alt="Quality"
-              class="mx-auto mb-4 h-16"
+              src="assets/icons/precision.svg"
+              alt="Precision"
+              class="mx-auto mb-4 h-14"
             />
             <h4 class="text-xl font-semibold mb-2">Precision Testing</h4>
             <p class="text-gray-600">
-              High-accuracy instruments for reliable diagnostics in the field.
+              High-accuracy instruments for reliable diagnostics.
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <img
-              src="assets/images/manual.png"
+              src="assets/icons/support.svg"
               alt="Support"
-              class="mx-auto mb-4 h-16"
+              class="mx-auto mb-4 h-14"
             />
             <h4 class="text-xl font-semibold mb-2">24/7 Support</h4>
             <p class="text-gray-600">
-              Our team is ready to assist you at every stage of your journey.
+              Dedicated support for all your technical needs.
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img
-              src="assets/images/manual.png"
-              alt="Innovation"
-              class="mx-auto mb-4 h-16"
+              src="assets/icons/integration.svg"
+              alt="Integration"
+              class="mx-auto mb-4 h-14"
             />
             <h4 class="text-xl font-semibold mb-2">Smart Integration</h4>
             <p class="text-gray-600">
-              Built to integrate with modern industrial control systems.
+              Easily integrates into your industrial system.
             </p>
           </div>
         </div>
@@ -90,48 +119,54 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-16 bg-gray-100">
-      <div class="container mx-auto px-4 md:flex md:items-center">
-        <div class="md:w-1/2 mb-8 md:mb-0">
+    <section id="about" class="py-20 bg-gray-100">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
           <img
-            src="assets/images/manual.png"
+            src="assets/images/about-image.webp"
             alt="About Electrosoft"
-            class="rounded-lg shadow-lg w-half"
+            class="rounded-lg shadow-xl"
+            loading="lazy"
           />
         </div>
-        <div class="md:w-1/2 md:pl-12">
+        <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
           <h3 class="text-3xl font-bold mb-4">About Us</h3>
           <p class="text-gray-700 mb-6">
-            Electrosoft Automation Pvt. Ltd. specializes in providing
-            industrial-grade electrical testing systems. Our mission is to
-            empower engineers with tools that are both innovative and
-            trustworthy.
+            Electrosoft Automation Pvt. Ltd. specializes in cutting-edge
+            electrical testing solutions tailored for high-performance
+            industries.
           </p>
-          <a
-            href="about.html"
-            class="text-blue-600 font-semibold hover:underline"
-            >Learn More →</a
+          <a href="#contact" class="text-blue-600 font-semibold hover:underline"
+            >Get in Touch →</a
           >
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-500 text-white text-center p-6 mt-10">
-      <div class="container mx-auto">
-        <p>&copy; 2025 Electrosoft Automation Pvt. Ltd. All rights reserved.</p>
-        <div class="flex justify-center space-x-4 mt-2">
+    <footer id="contact" class="bg-blue-600 text-white py-10">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="mb-4">&copy; 2025 Electrosoft Automation Pvt. Ltd.</p>
+        <div class="flex justify-center space-x-4">
           <a href="#"
-            ><img src="assets/images/facebook.png" alt="Facebook" class="h-6"
+            ><img src="assets/icons/facebook.svg" alt="Facebook" class="h-6"
           /></a>
           <a href="#"
-            ><img src="assets/images/twitter.png" alt="Twitter" class="h-6"
+            ><img src="assets/icons/twitter.svg" alt="Twitter" class="h-6"
           /></a>
           <a href="#"
-            ><img src="assets/images/linkedin.png" alt="LinkedIn" class="h-6"
+            ><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6"
           /></a>
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
