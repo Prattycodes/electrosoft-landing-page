@@ -26,19 +26,48 @@
       }
     </style>
   </head>
-  <body class="bg-white text-gray-800 overflow-x-hidden">
+  <body class="bg-white text-black overflow-x-hidden">
     <!-- Navbar -->
-    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <header class="bg-black text-white shadow-md sticky top-0 z-50">
       <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"
+        class="max-w-7xl mx-auto flex justify-between items-center px-15 py-4"
       >
         <h1 class="text-xl font-bold">Electrosoft Automation</h1>
-        <nav class="space-x-6 text-sm font-medium">
+        <!-- Mobile menu button -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 text-lg font-medium">
           <a href="#home" class="hover:underline">Home</a>
           <a href="#about" class="hover:underline">About</a>
           <a href="#features" class="hover:underline">Features</a>
           <a href="#contact" class="hover:underline">Contact</a>
         </nav>
+      </div>
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+        <a href="#home" class="block py-2 text-sm hover:underline">Home</a>
+        <a href="#about" class="block py-2 text-sm hover:underline">About</a>
+        <a href="#features" class="block py-2 text-sm hover:underline"
+          >Features</a
+        >
+        <a href="#contact" class="block py-2 text-sm hover:underline"
+          >Contact</a
+        >
       </div>
     </header>
 
@@ -56,7 +85,7 @@
           <p class="text-lg mb-6">Precision. Performance. Trust.</p>
           <a
             href="#features"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+            class="bg-black text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full transition duration-300"
             >Explore Features</a
           >
         </div>
@@ -164,9 +193,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="scripts/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
