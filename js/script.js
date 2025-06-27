@@ -1,9 +1,12 @@
+AOS.init();
 
-      AOS.init();
+// Toggle Mobile Menu and hide/show upper navbar
+const toggleMenu = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
-      // Mobile menu toggle
-      const toggleBtn = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      toggleBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
+let menuOpen = false;
+
+toggleMenu.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle("hidden", !menuOpen);
+});

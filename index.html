@@ -12,12 +12,16 @@
       content="Electrosoft, Electrical Testing, Breaker Testing, Cable Testing, Motor Testing"
     />
     <meta name="author" content="Pratham Tetgure, Rahul Pawar" />
-    <title>Electrosoft Automation</title>
     <link rel="icon" href="assets/images/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
@@ -27,49 +31,76 @@
     </style>
   </head>
   <body class="bg-white text-black overflow-x-hidden">
-    <!-- Navbar -->
-    <header class="bg-black text-white shadow-md sticky top-0 z-50">
-      <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-15 py-4"
+    <!-- Upper Navbar (hidden on mobile) -->
+    <div
+      id="upper-navbar"
+      class="hidden md:flex bg-[#ededed] text-[#4C4C4C] text-[12px] py-2 px-5 justify-between items-center"
+    >
+      <span class="tracking-wide"
+        >Official Website of Electrosoft Automation Pvt. Ltd.</span
       >
-        <h1 class="text-xl font-bold">Electrosoft Automation</h1>
-        <!-- Mobile menu button -->
-        <button id="menu-toggle" class="md:hidden focus:outline-none">
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex space-x-6 text-lg font-medium">
-          <a href="#home" class="hover:underline">Home</a>
-          <a href="#about" class="hover:underline">About</a>
-          <a href="#features" class="hover:underline">Features</a>
-          <a href="#contact" class="hover:underline">Contact</a>
-        </nav>
+      <div class="space-x-4">
+        <a href="#" class="hover:underline font-medium">Support</a>
+        <a href="#" class="hover:underline font-medium">Login</a>
       </div>
-      <!-- Mobile Menu Dropdown -->
-      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
-        <a href="#home" class="block py-2 text-sm hover:underline">Home</a>
-        <a href="#about" class="block py-2 text-sm hover:underline">About</a>
-        <a href="#features" class="block py-2 text-sm hover:underline"
-          >Features</a
-        >
-        <a href="#contact" class="block py-2 text-sm hover:underline"
-          >Contact</a
-        >
+    </div>
+
+    <!-- Main Navbar -->
+     
+    <nav
+      class="bg-white px-5 py-4 flex justify-between items-center border-b border-gray-300"
+    >
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img
+          src="your-logo-path.png"
+          alt="Electrosoft Logo"
+          class="h-8 w-auto"
+        />
+        <span class="text-xl font-bold text-black">ELECTROSOFT</span>
       </div>
-    </header>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-sm font-medium text-gray-800">
+        <li><a href="#" class="hover:text-black">Home</a></li>
+        <li><a href="#" class="hover:text-black">About</a></li>
+        <li><a href="#" class="hover:text-black">Products</a></li>
+        <li><a href="#" class="hover:text-black">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger (Mobile Only) -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-800 focus:outline-none"
+      >
+        <!-- Hamburger Icon -->
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden px-5 pb-4">
+      <ul class="space-y-2 text-sm font-medium text-gray-800">
+        <li><a href="#" class="block hover:text-black">Home</a></li>
+        <li><a href="#" class="block hover:text-black">About</a></li>
+        <li><a href="#" class="block hover:text-black">Products</a></li>
+        <li><a href="#" class="block hover:text-black">Contact</a></li>
+      </ul>
+    </div>
+    </body>
+    </html>
 
     <!-- Hero Section -->
     <section
