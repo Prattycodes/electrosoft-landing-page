@@ -46,18 +46,22 @@
     </header>
 
     <!-- Main Header -->
-    <header id="main-header" class="w-full h-[60px] bg-white shadow">
+    <header
+      id="main-header"
+      class="w-full h-[60px] bg-white shadow sticky top-0 z-50"
+    >
       <div
-        class="flex justify-between items-center h-full px-12 text-[17px] text-[#4C4C4C] font-medium"
+        class="flex justify-between items-center h-full px-12 text-[17px] text-[#4C4C4C] font-medium relative"
       >
-        <!-- Logo with fixed height -->
+        <!-- Logo -->
         <img
           src="assets/images/favicon.png"
           alt="Electrosoft Logo"
           class="h-10 w-auto"
         />
-        <!-- Navigation Links with hover styles -->
-        <nav class="space-x-6">
+
+        <!-- Navigation Links -->
+        <nav class="space-x-6 hidden md:flex">
           <a href="#" class="hover:text-gray-400 transition duration-200"
             >Products</a
           >
@@ -74,7 +78,65 @@
             >About Us</a
           >
         </nav>
-        <div>search_icon</div>
+
+        <!-- Search Container -->
+        <div class="flex items-center">
+          <!-- Search Icon - triggers the search bar -->
+          <button id="search-toggle" class="ml-6 focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600 hover:text-gray-400 transition duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Search Bar (hidden by default) -->
+          <div
+            id="search-bar"
+            class="absolute right-0 top-full w-full bg-black shadow-lg hidden transition-all duration-300 transform origin-top"
+          >
+            <div class="container mx-auto px-4 py-3 flex items-center">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-full py-2 px-4 border-b-2 border-gray-300 focus:border-red-500 focus:outline-none text-lg bg-black text-white"
+              />
+              <button
+                class="ml-4 bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-200"
+              >
+                Search
+              </button>
+              <button
+                id="close-search"
+                class="ml-4 text-gray-300 hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -142,6 +204,11 @@
               solution for high-performance transformer testing.
             </p>
           </div>
+          <button
+            class="bg-black text-base text-white px-5 py-2 mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-200"
+          >
+            Learn More
+          </button>
         </div>
         <div
           class="relative w-[180vh] flex-end bg-contain bg-no-repeat ml-20"
@@ -166,6 +233,11 @@
               solution for high-performance transformer testing.
             </p>
           </div>
+          <button
+            class="bg-black text-base text-white px-5 py-2 mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-200"
+          >
+            Learn More
+          </button>
         </div>
         <div
           class="relative w-[180vh] flex-end bg-contain bg-no-repeat ml-20"
@@ -190,6 +262,11 @@
               solution for high-performance transformer testing.
             </p>
           </div>
+          <button
+            class="bg-black text-base text-white px-5 py-2 mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-200"
+          >
+            Learn More
+          </button>
         </div>
         <div
           class="relative w-[180vh] flex-end bg-contain bg-no-repeat ml-20"
@@ -198,6 +275,220 @@
           "
         ></div>
       </div>
+    </section>
+
+    <!-- comparison Chart -->
+    <section id="comparison-chart" class="w-full overflow-x-auto touch-pan-x">
+      <table
+        class="w-full min-w-[900px] max-w-[1400px] mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+      >
+        <!-- Header Row -->
+        <thead>
+          <tr class="bg-gray-700 text-white">
+            <th class="p-4 text-center font-bold w-[200px] bg-gray-800">
+              <div class="flex flex-col justify-center h-full">
+                <div class="text-base font-bold mb-1">Key Features</div>
+                <div class="text-xs opacity-90">
+                  Electrosoft Testing Solutions
+                </div>
+              </div>
+            </th>
+            <th class="p-4 text-center border-r border-white/20 min-w-[150px]">
+              <div
+                class="text-base font-bold mb-1 min-h-[40px] flex items-center justify-center"
+              >
+                AI-Powered Advanced
+              </div>
+              <div class="text-xs opacity-90 mb-3 min-h-[40px]">
+                Fully Automatic with AI & Voice Control
+              </div>
+              <button
+                class="bg-black text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors w-[90%] max-w-[120px] mx-auto text-xs hover:bg-red-500"
+              >
+                Inquire Now
+              </button>
+            </th>
+            <th class="p-4 text-center border-r border-white/20 min-w-[150px]">
+              <div
+                class="text-base font-bold mb-1 min-h-[40px] flex items-center justify-center"
+              >
+                Fully Automatic
+              </div>
+              <div class="text-xs opacity-90 mb-3 min-h-[40px]">
+                High-Speed, Audit-Ready Testing
+              </div>
+              <button
+                class="bg-black text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors w-[90%] max-w-[120px] mx-auto text-xs hover:bg-red-500"
+              >
+                Inquire Now
+              </button>
+            </th>
+            <th class="p-4 text-center border-r border-white/20 min-w-[150px]">
+              <div
+                class="text-base font-bold mb-1 min-h-[40px] flex items-center justify-center"
+              >
+                Semi-Automatic
+              </div>
+              <div class="text-xs opacity-90 mb-3 min-h-[40px]">
+                Balanced Control & Efficiency
+              </div>
+              <button
+                class="bg-black text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors w-[90%] max-w-[120px] mx-auto text-xs hover:bg-red-500"
+              >
+                Inquire Now
+              </button>
+            </th>
+            <th class="p-4 text-center border-r border-white/20 min-w-[150px]">
+              <div
+                class="text-base font-bold mb-1 min-h-[40px] flex items-center justify-center"
+              >
+                Conventional
+              </div>
+              <div class="text-xs opacity-90 mb-3 min-h-[40px]">
+                Manual Control, Cost-Effective
+              </div>
+              <button
+                class="bg-black text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors w-[90%] max-w-[120px] mx-auto text-xs hover:bg-red-500"
+              >
+                Inquire Now
+              </button>
+            </th>
+            <th class="p-4 text-center min-w-[150px]">
+              <div
+                class="text-base font-bold mb-1 min-h-[40px] flex items-center justify-center"
+              >
+                LV Test Trolley
+              </div>
+              <div class="text-xs opacity-90 mb-3 min-h-[40px]">
+                Mobile Low-Voltage Testing
+              </div>
+              <button
+                class="bg-black text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors w-[90%] max-w-[120px] mx-auto text-xs hover:bg-red-500"
+              >
+                Inquire Now
+              </button>
+            </th>
+          </tr>
+        </thead>
+
+        <!-- Feature Rows -->
+        <tbody>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50 w-[200px]">
+              Transformer Range
+            </td>
+            <td class="p-4 text-center min-w-[150px]">100 KVA - 750 MVA</td>
+            <td class="p-4 text-center min-w-[150px]">100 KVA - 750 MVA</td>
+            <td class="p-4 text-center min-w-[150px]">100 KVA - 750 MVA</td>
+            <td class="p-4 text-center min-w-[150px]">100 KVA - 750 MVA</td>
+            <td class="p-4 text-center min-w-[150px]">N/A</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              AI-Powered Testing
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">Voice Control</td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              43" Interactive Display
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              Fully Automatic Testing
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              Pneumatic CT-PT Selection
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓ (Optional)
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              IEC/IEEE Compliance
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              Remote Monitoring
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓ (Optional)
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-black font-bold">
+              ✓ (Optional)
+            </td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+            <td class="p-4 text-center min-w-[150px] text-gray-500">✗</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <td class="p-4 font-bold text-left bg-gray-50">
+              Warranty & Support
+            </td>
+            <td class="p-4 text-center min-w-[150px]">18 Months</td>
+            <td class="p-4 text-center min-w-[150px]">18 Months</td>
+            <td class="p-4 text-center min-w-[150px]">18 Months</td>
+            <td class="p-4 text-center min-w-[150px]">18 Months</td>
+            <td class="p-4 text-center min-w-[150px]">18 Months</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- Scripts -->
