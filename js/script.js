@@ -1,38 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Search functionality
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  mobileMenuButton.addEventListener("click", function (e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    mobileNav.classList.toggle("hidden");
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (!mobileNav.contains(event.target)) {
+      mobileNav.classList.add("hidden");
+    }
+  });
+
+  // Close mobile menu when clicking on a nav link
+  const mobileNavLinks = mobileNav.querySelectorAll("a");
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      mobileNav.classList.add("hidden");
+    });
+  });
+
+  // Existing search functionality
   const searchToggle = document.getElementById("search-toggle");
   const closeSearch = document.getElementById("close-search");
   const searchBar = document.getElementById("search-bar");
   const mainHeader = document.getElementById("main-header");
 
   searchToggle.addEventListener("click", function (e) {
-    e.stopPropagation(); // Prevent event from bubbling up
+    e.stopPropagation();
     searchBar.classList.toggle("hidden");
-    searchBar.classList.toggle("block");
     mainHeader.classList.toggle("h-[60px]");
-    mainHeader.classList.toggle("h-auto");
+    // Close mobile menu if open when opening search
+    mobileNav.classList.add("hidden");
   });
 
   closeSearch.addEventListener("click", function (e) {
     e.stopPropagation();
     searchBar.classList.add("hidden");
-    searchBar.classList.remove("block");
     mainHeader.classList.add("h-[60px]");
-    mainHeader.classList.remove("h-auto");
   });
 
   // Close search when clicking outside
   document.addEventListener("click", function (event) {
     if (!searchBar.contains(event.target) && event.target !== searchToggle) {
       searchBar.classList.add("hidden");
-      searchBar.classList.remove("block");
       mainHeader.classList.add("h-[60px]");
-      mainHeader.classList.remove("h-auto");
     }
-  });
-
-  // Stop propagation when clicking inside search bar
-  searchBar.addEventListener("click", function (e) {
-    e.stopPropagation();
   });
 });
