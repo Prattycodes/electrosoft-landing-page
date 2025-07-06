@@ -50,4 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
       mainHeader.classList.add("h-[60px]");
     }
   });
+
+  const upperHeader = document.getElementById("upper-header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset;
+
+    // For desktop only (mobile has hidden upper header)
+    if (window.innerWidth >= 768) {
+      if (currentScroll <= 0) {
+        // At top of page - show upper header
+        upperHeader.classList.remove("-translate-y-full");
+        upperHeader.classList.remove("opacity-0");
+      } else if (currentScroll > lastScroll) {
+        // Scrolling down - hide upper header
+        upperHeader.classList.add("-translate-y-full");
+        upperHeader.classList.add("opacity-0");
+      } else {
+        // Scrolling up - show upper header
+        upperHeader.classList.remove("-translate-y-full");
+        upperHeader.classList.remove("opacity-0");
+      }
+    }
+
+    lastScroll = currentScroll;
+  });
 });

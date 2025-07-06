@@ -32,11 +32,11 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body class="bg-whitet-black overflow-x-hidden">
+  <body class="bg-white-black overflow-x-hidden">
     <!-- Upper Header -->
     <header
       id="upper-header"
-      class="w-full h-auto md:h-[30px] bg-[#ededed] py-1 md:py-0 hidden md:block"
+      class="w-full h-auto md:h-[30px] bg-[#ededed] py-1 md:py-0 transition-all duration-300 ease-in-out transform"
     >
       <div
         class="flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-10 text-sm md:text-[14px] text-[#4C4C4C] font-medium"
@@ -144,13 +144,13 @@
           <!-- Search Bar (hidden by default) -->
           <div
             id="search-bar"
-            class="absolute right-0 md:right-10 top-full hidden md:top-0 w-full md:w-[405px] bg-white transition-all duration-300 transform origin-top"
+            class="absolute right-0 md:right-10 top-full hidden md:top-0 w-full md:w-[375px] bg-white transition-all duration-300 transform origin-top"
           >
             <div class="container mx-auto px-2 py-2 flex items-center">
               <input
                 type="text"
-                placeholder="What are you testing today?..."
-                class="w-full py-2 mt-0.5 px-4 border-b-2 rounded-md border-gray-300 focus:border-white focus:outline-none text-M bg-gray-900 text-white"
+                placeholder="Search"
+                class="w-full py-2 mt-0.5 px-4 border-1 rounded-md border-gray-900 focus:outline-none text-M bg-white text-black"
               />
               <button
                 id="inside-search-toggle"
