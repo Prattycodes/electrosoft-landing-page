@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchToggle.addEventListener("click", function (e) {
     e.stopPropagation();
     searchBar.classList.toggle("hidden");
-    mainHeader.classList.toggle("h-[60px]");
+    // mainHeader.classList.toggle("h-[60px]");
     // Close mobile menu if open when opening search
     mobileNav.classList.add("hidden");
   });
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   closeSearch.addEventListener("click", function (e) {
     e.stopPropagation();
     searchBar.classList.add("hidden");
-    mainHeader.classList.add("h-[60px]");
+    // mainHeader.classList.add("h-[60px]");
   });
 
   // Close search when clicking outside
