@@ -76,4 +76,117 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lastScroll = currentScroll;
   });
+  // Add this to your script.js file
+  const clientCarousel = document.querySelector(".animate-scroll");
+
+  // Make sure the animation runs smoothly when reaching the end
+  clientCarousel.addEventListener("animationiteration", () => {
+    // Reset position to avoid jump
+    clientCarousel.style.animation = "none";
+    clientCarousel.offsetHeight; // Trigger reflow
+    clientCarousel.style.animation = "scroll 20s linear infinite";
+  });
+
+  const featureData = {
+    ai: {
+      title: "AI-Powered Advanced",
+      features: [
+        { label: "Transformer Range", value: "100 KVA - 750 MVA" },
+        { label: "AI-Powered Testing", value: "✓" },
+        { label: "Voice Control", value: "✓" },
+        { label: '43" Interactive Display', value: "✓" },
+        { label: "Fully Automatic Testing", value: "✓" },
+        { label: "Pneumatic CT-PT Selection", value: "✓" },
+        { label: "IEC/IEEE Compliance", value: "✓" },
+        { label: "Remote Monitoring", value: "✓ (Optional)" },
+        { label: "Warranty & Support", value: "18 Months" },
+      ],
+    },
+    auto: {
+      title: "Fully Automatic",
+      features: [
+        { label: "Transformer Range", value: "100 KVA - 750 MVA" },
+        { label: "AI-Powered Testing", value: "✗" },
+        { label: "Voice Control", value: "✗" },
+        { label: '43" Interactive Display', value: "✗" },
+        { label: "Fully Automatic Testing", value: "✓" },
+        { label: "Pneumatic CT-PT Selection", value: "✓ (Optional)" },
+        { label: "IEC/IEEE Compliance", value: "✓" },
+        { label: "Remote Monitoring", value: "✓ (Optional)" },
+        { label: "Warranty & Support", value: "18 Months" },
+      ],
+    },
+    semi: {
+      title: "Semi-Automatic",
+      features: [
+        { label: "Transformer Range", value: "100 KVA - 750 MVA" },
+        { label: "AI-Powered Testing", value: "✗" },
+        { label: "Voice Control", value: "✗" },
+        { label: '43" Interactive Display', value: "✗" },
+        { label: "Fully Automatic Testing", value: "✗" },
+        { label: "Pneumatic CT-PT Selection", value: "✗" },
+        { label: "IEC/IEEE Compliance", value: "✓" },
+        { label: "Remote Monitoring", value: "✗" },
+        { label: "Warranty & Support", value: "18 Months" },
+      ],
+    },
+    manual: {
+      title: "Conventional",
+      features: [
+        { label: "Transformer Range", value: "100 KVA - 750 MVA" },
+        { label: "AI-Powered Testing", value: "✗" },
+        { label: "Voice Control", value: "✗" },
+        { label: '43" Interactive Display', value: "✗" },
+        { label: "Fully Automatic Testing", value: "✗" },
+        { label: "Pneumatic CT-PT Selection", value: "✗" },
+        { label: "IEC/IEEE Compliance", value: "✓" },
+        { label: "Remote Monitoring", value: "✗" },
+        { label: "Warranty & Support", value: "18 Months" },
+      ],
+    },
+    lv: {
+      title: "LV Test Trolley",
+      features: [
+        { label: "Transformer Range", value: "N/A" },
+        { label: "AI-Powered Testing", value: "✗" },
+        { label: "Voice Control", value: "✗" },
+        { label: '43" Interactive Display', value: "✗" },
+        { label: "Fully Automatic Testing", value: "✗" },
+        { label: "Pneumatic CT-PT Selection", value: "✗" },
+        { label: "IEC/IEEE Compliance", value: "✗" },
+        { label: "Remote Monitoring", value: "✗" },
+        { label: "Warranty & Support", value: "18 Months" },
+      ],
+    },
+  };
+
+  const selector = document.getElementById("trolley-selector");
+  const display = document.getElementById("mobile-trolley-info");
+
+  function updateTrolleyInfo(key) {
+    const data = featureData[key];
+    display.innerHTML = `
+        <h3 class="text-lg font-semibold">${data.title}</h3>
+        <ul class="space-y-2">
+          ${data.features
+            .map(
+              (f) => `
+            <li class="flex justify-between border-b pb-2">
+              <span>${f.label}</span>
+              <span class="font-bold">${f.value}</span>
+            </li>
+          `
+            )
+            .join("")}
+        </ul>
+      `;
+  }
+
+  // Initialize with default
+  updateTrolleyInfo("ai");
+
+  // Change on selection
+  selector.addEventListener("change", (e) => {
+    updateTrolleyInfo(e.target.value);
+  });
 });
