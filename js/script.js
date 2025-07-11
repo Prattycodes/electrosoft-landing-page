@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { label: "Transformer Range", value: "100 KVA - 750 MVA" },
         { label: "AI-Powered Testing", value: "✓" },
         { label: "Voice Control", value: "✓" },
-        { label: '43" Interactive Display', value: "✓" },
+        { label: 'Interactive Display', value: "✓ (43 Inch)" },
         { label: "Fully Automatic Testing", value: "✓" },
         { label: "Pneumatic CT-PT Selection", value: "✓" },
         { label: "IEC/IEEE Compliance", value: "✓" },
