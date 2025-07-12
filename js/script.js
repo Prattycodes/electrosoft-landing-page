@@ -76,17 +76,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lastScroll = currentScroll;
   });
-  // Add this to your script.js file
-  const clientCarousel = document.querySelector(".animate-scroll");
+
+  const carousel = document.querySelector(".animate-scroll");
 
   // Make sure the animation runs smoothly when reaching the end
-  clientCarousel.addEventListener("animationiteration", () => {
+  carousel.addEventListener("animationiteration", () => {
     // Reset position to avoid jump
-    clientCarousel.style.animation = "none";
-    clientCarousel.offsetHeight; // Trigger reflow
-    clientCarousel.style.animation = "scroll 20s linear infinite";
+    carousel.style.animation = "none";
+    carousel.offsetHeight; // Trigger reflow
+    carousel.style.animation = "";
   });
-
+  
   const featureData = {
     ai: {
       title: "AI-Powered Advanced",
