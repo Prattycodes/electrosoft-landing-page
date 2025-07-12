@@ -15,17 +15,33 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - 2rem));
+    transform: translateX(calc(-124%));
   }
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
   display: flex;
-  width: calc(200% + 4rem); /* Double width for seamless looping */
+  width: calc(100% + 1rem);
 }
 
 /* Pause animation on hover */
-.animate-scroll:hover {
+.group:hover .animate-scroll {
   animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-scroll {
+    width: calc(960% + 1rem);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-33.333%));
+    }
+  }
 }
