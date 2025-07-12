@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preload" as="image" href="assets/images/transformer_hero.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Electrosoft Automation</title>
@@ -248,43 +249,59 @@
       <h1 class="font-bold text-2xl md:text-4xl">
         Our Transformer Testing Solutions
       </h1>
-      <p class="text-base md:text-lg text-justify text-[#4C4C4C] mb-6 md:mb-0">
+      <p class="text-base md:text-lg text-left text-[#4C4C4C] mb-6 md:mb-0">
         Discover a comprehensive suite of solutions to enhance testing
         protocols, delivering peak performance and regulatory compliance.
       </p>
 
       <!-- Each trolly item -->
-      <div
-        class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
-      >
+      <div class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between">
         <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0">
-          <h1 class="font-bold text-2xl md:text-4xl">Fully Automatic</h1>
+          <h1 class="font-bold text-2xl md:text-4xl">Fully Automatic Test</h1>
           <div class="mt-4 md:mt-5">
             <h2 class="font-medium text-lg md:text-xl">Key Features</h2>
-            <p
-              class="text-base md:text-lg text-justify text-[#4C4C4C] pr-0 md:pr-20"
-            >
-              Electrosoft’s Fully Automatic Transformer Testing System delivers
+            <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20">
+              Electrosoft's Fully Automatic Transformer Testing System delivers
               unmatched reliability, automation, and precision. Powered by the
-              robust X’mer Edge software, it performs all critical transformer
+              robust X'mer Edge software, it performs all critical transformer
               tests with minimal connection changes, ensuring fast, repeatable,
               and audit-ready results. Built to IEC and IEEE standards and
-              equipped with optional automation features, it’s the ideal
+              equipped with optional automation features, it's the ideal
               solution for high-performance transformer testing.
             </p>
           </div>
           <button
-            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
+            onclick="openPopup('fullyAutomatic')"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-colors duration-300"
           >
             Learn More
           </button>
         </div>
-        <div
-          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2"
-          style="
-            background-image: url('assets/images/Asset\ 10@3x-100.jpg');
-          "
-        ></div>
+        <div class="w-full md:w-1/2 h-48 md:h-[450px] bg-no-repeat bg-center md:bg-right order-1 md:order-2"
+        style="background-image: url('assets/images/Asset 10@3x-100.jpg');
+        background-size: contain;">
+        </div> 
+      </div>
+      
+      <!-- Popup Modal -->
+      <div id="infoPopup" class="flex fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-xl p-6 md:p-8 max-w-3xl mt-20 max-h-[90vh] overflow-y-auto">
+          <div class="flex justify-between items-start mb-4">
+            <h3 id="popupTitle" class="text-2xl md:text-3xl font-bold"></h3>
+            <button onclick="closePopup()" class="text-gray-500 hover:text-black text-3xl">&times;</button>
+          </div>
+          
+          <div id="popupContent" class="space-y-4">
+            <!-- Content will be inserted here by JavaScript -->
+          </div>
+          
+          <button
+            onclick="closePopup()"
+            class="mt-4 bg-black text-white px-5 py-2 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-colors duration-300"
+          >
+            Close
+          </button>
+        </div>
       </div>
       <div
         class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row-reverse justify-between"
@@ -293,7 +310,7 @@
           <h1 class="font-bold text-2xl md:text-4xl">Fully Automatic</h1>
           <div class="mt-4 md:mt-5">
             <h2 class="font-medium text-lg md:text-xl">Key Features</h2>
-            <p class="text-base md:text-lg text-justify text-[#4C4C4C] pr-0">
+            <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
               Electrosoft's Fully Automatic Transformer Testing System delivers
               unmatched reliability, automation, and precision. Powered by the
               robust X'mer Edge software, it performs all critical transformer
@@ -324,7 +341,7 @@
           <div class="mt-4 md:mt-5">
             <h2 class="font-medium text-lg md:text-xl">Key Features</h2>
             <p
-              class="text-base md:text-lg text-justify text-[#4C4C4C] pr-0 md:pr-20"
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
             >
               Electrosoft’s Fully Automatic Transformer Testing System delivers
               unmatched reliability, automation, and precision. Powered by the
@@ -355,7 +372,7 @@
           <h1 class="font-bold text-2xl md:text-4xl">Fully Automatic</h1>
           <div class="mt-4 md:mt-5">
             <h2 class="font-medium text-lg md:text-xl">Key Features</h2>
-            <p class="text-base md:text-lg text-justify text-[#4C4C4C] pr-0">
+            <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
               Electrosoft's Fully Automatic Transformer Testing System delivers
               unmatched reliability, automation, and precision. Powered by the
               robust X'mer Edge software, it performs all critical transformer
@@ -386,7 +403,7 @@
           <div class="mt-4 md:mt-5">
             <h2 class="font-medium text-lg md:text-xl">Key Features</h2>
             <p
-              class="text-base md:text-lg text-justify text-[#4C4C4C] pr-0 md:pr-20"
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
             >
               Electrosoft’s Fully Automatic Transformer Testing System delivers
               unmatched reliability, automation, and precision. Powered by the

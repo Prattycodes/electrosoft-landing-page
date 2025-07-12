@@ -1,3 +1,61 @@
+function openPopup(type) {
+  const popup = document.getElementById("infoPopup");
+  const title = document.getElementById("popupTitle");
+  const content = document.getElementById("popupContent");
+
+  if (popupContents[type]) {
+    title.textContent = popupContents[type].title;
+    content.innerHTML = popupContents[type].content;
+    popup.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closePopup() {
+  document.getElementById("infoPopup").classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+const popupContents = {
+  fullyAutomatic: {
+    title: "Fully Automatic Transformer Testing System",
+    content: `
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
+        <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
+          <li>Complete automation of all standard transformer tests</li>
+          <li>X'mer Edge software with intuitive interface</li>
+          <li>Minimal manual intervention required</li>
+          <li>IEC and IEEE standards compliance</li>
+          <li>Automated report generation</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Technical Specifications</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div>
+            <p class="font-medium">Transformer Range:</p>
+            <p class="text-[#4C4C4C]">100 KVA - 750 MVA</p>
+          </div>
+          <div>
+            <p class="font-medium">Testing Accuracy:</p>
+            <p class="text-[#4C4C4C]">±0.1%</p>
+          </div>
+          <div>
+            <p class="font-medium">Compliance:</p>
+            <p class="text-[#4C4C4C]">IEC 60076, IEEE C57.12</p>
+          </div>
+          <div>
+            <p class="font-medium">Warranty:</p>
+            <p class="text-[#4C4C4C]">18 Months</p>
+          </div>
+        </div>
+      </div>
+    `,
+  },
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu functionality
   const mobileMenuButton = document.getElementById("mobile-menu-button");
@@ -86,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.offsetHeight; // Trigger reflow
     carousel.style.animation = "";
   });
-  
+
   const featureData = {
     ai: {
       title: "AI-Powered Advanced",
@@ -94,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { label: "Transformer Range", value: "100 KVA - 750 MVA" },
         { label: "AI-Powered Testing", value: "✓" },
         { label: "Voice Control", value: "✓" },
-        { label: 'Interactive Display', value: "✓ (43 Inch)" },
+        { label: "Interactive Display", value: "✓ (43 Inch)" },
         { label: "Fully Automatic Testing", value: "✓" },
         { label: "Pneumatic CT-PT Selection", value: "✓" },
         { label: "IEC/IEEE Compliance", value: "✓" },
@@ -188,5 +246,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Change on selection
   selector.addEventListener("change", (e) => {
     updateTrolleyInfo(e.target.value);
+  });
+
+  // Close when clicking outside content
+  document.getElementById("infoPopup").addEventListener("click", function (e) {
+    if (e.target === this) {
+      closePopup();
+    }
   });
 });
