@@ -17,17 +17,20 @@ function closePopup() {
 }
 
 const popupContents = {
-  fullyAutomatic: {
-    title: "Fully Automatic Transformer Testing System",
+  AIPowered: {
+    title: "AI Powered Advanced Fully Automatic Transformer Test bench",
     content: `
       <div>
         <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
         <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
-          <li>Complete automation of all standard transformer tests</li>
-          <li>X'mer Edge software with intuitive interface</li>
-          <li>Minimal manual intervention required</li>
-          <li>IEC and IEEE standards compliance</li>
-          <li>Automated report generation</li>
+          <li>AI-powered testing with intelligent X’mer Edge software</li>
+          <li>Voice control for hands-free, intuitive operation</li>
+          <li>43-inch interactive display for real-time visualization and control</li>
+          <li>Optional motorized isolators for heat run test and HT capacitor bank switching</li>
+          <li>Fully automatic CT-PT primary selection using pneumatic knife switches</li>
+          <li>Optional Web Integration Module for remote test monitoring and live viewing</li>
+          <li>Includes on-site installation, operator training</li>
+          <li>Designed for error-free digital precision and 24/7 reliability</li>
         </ul>
       </div>
       
@@ -36,7 +39,7 @@ const popupContents = {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
           <div>
             <p class="font-medium">Transformer Range:</p>
-            <p class="text-[#4C4C4C]">100 KVA - 750 MVA</p>
+            <p class="text-[#4C4C4C]">100 KVA, 433V up to 750 MVA, 420 kV</p>
           </div>
           <div>
             <p class="font-medium">Testing Accuracy:</p>
