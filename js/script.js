@@ -60,6 +60,12 @@ const popupContents = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: false,
+    mirror: true,
+  });
   // Mobile menu functionality
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileNav = document.getElementById("mobile-nav");

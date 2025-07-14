@@ -28,6 +28,7 @@
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -92,19 +93,34 @@
 
         <!-- Navigation Links -->
         <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-6">
-          <a href="#" class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out">
-          Products
+          <a
+            href="#"
+            class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >
+            Products
           </a>
-          <a href="#" class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out">
+          <a
+            href="#"
+            class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >
             Industries</a
           >
-          <a href="#" class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out">
+          <a
+            href="#"
+            class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >
             Service</a
           >
-          <a href="#" class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out">
+          <a
+            href="#"
+            class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >
             Sustainability</a
           >
-          <a href="#" class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out">
+          <a
+            href="#"
+            class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >
             About Us</a
           >
         </nav>
@@ -212,7 +228,9 @@
       >
         <h1 class="text-xl md:text-2xl font-medium-bold">DISCOVER</h1>
         <h2 class="text-2xl md:text-4xl font-bold leading-snug">
-          Transformer<br />Testing<br />Suite
+          Transformer<br />
+          Testing<br />
+          Suite
         </h2>
         <a
           href="https://electrosoftindia.com/transformer-testing/Electrosoft Transformer Testing Suite.pdf"
@@ -243,8 +261,11 @@
       </span>
     </section>
 
-    <!-- Trolly Types -->
-    <section id="trolly-types" class="pt-8 md:pt-20 px-6 md:px-28 w-full">
+    <!-- Trolly Types Without Animations -->
+    <section
+      id="trolly-types"
+      class="pt-8 md:pt-20 hidden px-6 md:px-28 w-full"
+    >
       <div class="h-2 w-16 md:h-2.5 md:w-24 bg-black my-4 md:my-6"></div>
       <h1 class="font-bold text-2xl md:text-4xl">
         Our Transformer Testing Solutions
@@ -253,49 +274,61 @@
         Discover a comprehensive suite of solutions to enhance testing
         protocols, delivering peak performance and regulatory compliance.
       </p>
-      
+
       <!-- Each trolly item -->
       <div
-      class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
-    >
-      <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0">
-        <h1 class="font-bold text-2xl md:text-4xl">AI Powered Advanced Fully Automatic Transformer Test bench</h1>
-        <div class="mt-4 md:mt-5">
-          <!-- <h2 class="font-medium text-lg md:text-xl">Key Features</h2> -->
-          <p
-            class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
+        class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
+      >
+        <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0">
+          <h1 class="font-bold text-2xl md:text-4xl">
+            AI Powered Advanced Fully Automatic Transformer Test bench
+          </h1>
+          <div class="mt-4 md:mt-5">
+            <!-- <h2 class="font-medium text-lg md:text-xl">Key Features</h2> -->
+            <p
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
+            >
+              Experience the world’s most advanced transformer testing
+              technology with Electrosoft’s AI-powered system. Featuring voice
+              control, a large 43-inch interactive display, and optional
+              automation modules, this fully automatic test bench delivers
+              unmatched speed, precision, and reliability. Built to meet global
+              standards and backed by full-service support, it sets a new
+              benchmark in transformer testing.
+            </p>
+          </div>
+          <button
+            onclick="openPopup('AIPowered')"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
-          Experience the world’s most advanced transformer testing technology with Electrosoft’s AI-powered system.
-Featuring voice control, a large 43-inch interactive display, and optional automation modules, this fully
-automatic test bench delivers unmatched speed, precision, and reliability. Built to meet global standards and
-backed by full-service support, it sets a new benchmark in transformer testing.
-          </p>
+            Learn More
+          </button>
         </div>
-        <button onclick="openPopup('AIPowered')"
-          class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
-        >
-          Learn More
-        </button>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2 rounded-sm shadow-2xl"
+          style="
+            background-image: url('assets/images/AIPoweredTrolly.png');
+            background-size: cover;
+          "
+        ></div>
       </div>
-      <div
-        class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2 rounded-sm shadow-2xl"
-        style="
-          background-image: url('assets/images/AIPoweredTrolly.png');
-          background-size: cover;
-        "
-      ></div>
-      </div>
+      <!-- Trolly2 -->
       <div
         class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row-reverse justify-between"
       >
         <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0 md:ml-10">
-          <h1 class="font-bold text-2xl md:text-4xl">Fully Automatic Transformer Test Bench</h1>
+          <h1 class="font-bold text-2xl md:text-4xl">
+            Fully Automatic Transformer Test Bench
+          </h1>
           <div class="mt-4 md:mt-5">
             <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
-              Electrosoft’s Fully Automatic Transformer Testing System delivers unmatched reliability, automation, and
-precision. Powered by the robust X’mer Edge software, it performs all critical transformer tests with minimal
-connection changes, ensuring fast, repeatable, and audit-ready results. Built to IEC and IEEE standards and
-equipped with optional automation features, it’s the ideal solution for high-performance transformer testing.
+              Electrosoft’s Fully Automatic Transformer Testing System delivers
+              unmatched reliability, automation, and precision. Powered by the
+              robust X’mer Edge software, it performs all critical transformer
+              tests with minimal connection changes, ensuring fast, repeatable,
+              and audit-ready results. Built to IEC and IEEE standards and
+              equipped with optional automation features, it’s the ideal
+              solution for high-performance transformer testing.
             </p>
           </div>
           <button
@@ -312,19 +345,24 @@ equipped with optional automation features, it’s the ideal solution for high-p
           "
         ></div>
       </div>
+      <!-- Trolly 3 -->
       <div
         class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row justify-between"
       >
         <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0">
-          <h1 class="font-bold text-2xl md:text-4xl">Semi-automatic Transformer Test Bench</h1>
+          <h1 class="font-bold text-2xl md:text-4xl">
+            Semi-automatic Transformer Test Bench
+          </h1>
           <div class="mt-4 md:mt-5">
             <p
               class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
             >
-            Electrosoft’s Semi-Automatic Transformer Testing System offers the perfect balance of control, efficiency,
-            and reliability. Designed with a robust PLC and HMI-based interface, it enables smooth, accurate execution of
-            all critical transformer tests with just three simple connections. Ideal for manufacturers seeking dependable
-            performance with room to scale.
+              Electrosoft’s Semi-Automatic Transformer Testing System offers the
+              perfect balance of control, efficiency, and reliability. Designed
+              with a robust PLC and HMI-based interface, it enables smooth,
+              accurate execution of all critical transformer tests with just
+              three simple connections. Ideal for manufacturers seeking
+              dependable performance with room to scale.
             </p>
           </div>
           <button
@@ -341,17 +379,22 @@ equipped with optional automation features, it’s the ideal solution for high-p
           "
         ></div>
       </div>
+      <!-- Trolly 4 -->
       <div
         class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row-reverse justify-between"
       >
         <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0 md:ml-10">
-          <h1 class="font-bold text-2xl md:text-4xl">Conventional Transformer Test Bench</h1>
+          <h1 class="font-bold text-2xl md:text-4xl">
+            Conventional Transformer Test Bench
+          </h1>
           <div class="mt-4 md:mt-5">
             <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
-              Electrosoft’s Conventional Transformer Testing System delivers dependable, cost-effective testing with
-complete manual control. Featuring a rugged design and joystick-controlled excitation, it’s ideal for low- to
-medium-volume manufacturers and R&D labs seeking reliable performance without compromising precision or
-standards compliance.
+              Electrosoft’s Conventional Transformer Testing System delivers
+              dependable, cost-effective testing with complete manual control.
+              Featuring a rugged design and joystick-controlled excitation, it’s
+              ideal for low- to medium-volume manufacturers and R&D labs seeking
+              reliable performance without compromising precision or standards
+              compliance.
             </p>
           </div>
           <button
@@ -368,23 +411,28 @@ standards compliance.
           "
         ></div>
       </div>
+      <!-- Trolly 5 -->
       <div
         class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row justify-between"
       >
         <div class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0">
-          <h1 class="font-bold text-2xl md:text-4xl">Low Voltage Test trolley
-            Refer</h1>
+          <h1 class="font-bold text-2xl md:text-4xl">
+            Low Voltage Test trolley Refer
+          </h1>
           <div class="mt-4 md:mt-5">
             <!-- <h2 class="font-medium text-lg md:text-xl">Key Features</h2> -->
             <p
               class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
             >
-            Electrosoft’s LV Test Trolley is a compact, mobile solution designed to streamline low-voltage transformer
-            testing. Built for durability and seamless integration with any of our test systems, it brings unmatched flexibility,
-            reduces setup time, and improves efficiency across your testing floor.
+              Electrosoft’s LV Test Trolley is a compact, mobile solution
+              designed to streamline low-voltage transformer testing. Built for
+              durability and seamless integration with any of our test systems,
+              it brings unmatched flexibility, reduces setup time, and improves
+              efficiency across your testing floor.
             </p>
           </div>
-          <button onclick="openPopup('AIPowered')"
+          <button
+            onclick="openPopup('AIPowered')"
             class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
             Learn More
@@ -398,29 +446,298 @@ standards compliance.
           "
         ></div>
       </div>
-
-      <!-- Popup Modal -->
-      <div id="infoPopup" class="flex fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50">
-        <div class="bg-white rounded-xl p-6 md:p-8 max-w-3xl mt-19 max-h-[80vh] overflow-y-auto">
-          <div class="flex justify-between items-start mb-4">
-            <h3 id="popupTitle" class="text-2xl md:text-3xl font-bold"></h3>
-            <button onclick="closePopup()" class="text-gray-500 hover:text-black text-3xl">&times;</button>
-          </div>
-          
-          <div id="popupContent" class="space-y-4">
-            <!-- Content will be inserted here by JavaScript -->
-          </div>
-          
+    </section>
+    <!-- Popup Modal -->
+    <div
+      id="infoPopup"
+      class="flex fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+      data-aos="fade"
+      data-aos-duration="300"
+    >
+      <div
+        class="bg-white rounded-xl p-6 md:p-8 max-w-3xl mt-19 max-h-[85vh] overflow-y-auto"
+      >
+        <div class="flex justify-between items-start mb-4">
+          <h3 id="popupTitle" class="text-2xl md:text-3xl font-bold"></h3>
           <button
             onclick="closePopup()"
-            class="mt-4 bg-black text-white px-5 py-2 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-colors duration-300 hidden"
+            class="text-gray-500 hover:text-black text-3xl"
           >
-            Close
+            &times;
           </button>
         </div>
-      </div>
 
-      <!-- Repeat for other trolly items -->
+        <div id="popupContent" class="space-y-4">
+          <!-- Content will be inserted here by JavaScript -->
+        </div>
+
+        <button
+          onclick="closePopup()"
+          class="mt-4 bg-black text-white px-5 py-2 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-colors duration-300 hidden"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- Trolly Types With Animations-->
+    <section
+      id="trolly-types"
+      class="pt-8 md:pt-20 px-6 md:px-28 w-full"
+      data-aos="fade-up"
+    >
+      <div
+        class="h-2 w-16 md:h-2.5 md:w-24 bg-black my-4 md:my-6"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      ></div>
+      <h1
+        class="font-bold text-2xl md:text-4xl"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        Our Transformer Testing Solutions
+      </h1>
+      <p
+        class="text-base md:text-lg text-left text-[#4C4C4C] mb-6 md:mb-0"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Discover a comprehensive suite of solutions to enhance testing
+        protocols, delivering peak performance and regulatory compliance.
+      </p>
+
+      <!-- Trolly1 -->
+      <div
+        class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0"
+          data-aos="fade-right"
+        >
+          <h1
+            class="font-bold text-2xl md:text-4xl"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            AI Powered Advanced Fully Automatic Transformer Test bench
+          </h1>
+          <div class="mt-4 md:mt-5" data-aos="fade-right" data-aos-delay="150">
+            <p
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
+            >
+              Experience the world’s most advanced transformer testing
+              technology with Electrosoft’s AI-powered system. Featuring voice
+              control, a large 43-inch interactive display, and optional
+              automation modules, this fully automatic test bench delivers
+              unmatched speed, precision, and reliability. Built to meet global
+              standards and backed by full-service support, it sets a new
+              benchmark in transformer testing.
+            </p>
+          </div>
+          <button
+            onclick="openPopup('AIPowered')"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2 rounded-sm shadow-2xl transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+          style="
+            background-image: url('assets/images/AIPoweredTrolly.png');
+            background-size: cover;
+          "
+          data-aos="fade-left"
+          data-aos-delay="200"
+        ></div>
+      </div>
+      <!-- Trolly2 -->
+      <div
+        class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row-reverse justify-between"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0 md:ml-10"
+          data-aos="fade-left"
+        >
+          <h1
+            class="font-bold text-2xl md:text-4xl"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            Fully Automatic Transformer Test Bench
+          </h1>
+          <div class="mt-4 md:mt-5" data-aos="fade-left" data-aos-delay="150">
+            <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
+              Electrosoft’s Fully Automatic Transformer Testing System delivers
+              unmatched reliability, automation, and precision. Powered by the
+              robust X’mer Edge software, it performs all critical transformer
+              tests with minimal connection changes, ensuring fast, repeatable,
+              and audit-ready results. Built to IEC and IEEE standards and
+              equipped with optional automation features, it’s the ideal
+              solution for high-performance transformer testing.
+            </p>
+          </div>
+          <button
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:mr-20 order-1 md:order-2 rounded-sm shadow-2xl transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+          style="
+            background-image: url('assets/images/fully_automatic_trolly.png');
+            background-size: cover;
+          "
+          data-aos="fade-right"
+          data-aos-delay="200"
+        ></div>
+      </div>
+      <!-- Trolly3 -->
+      <div
+        class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0"
+          data-aos="fade-right"
+        >
+          <h1
+            class="font-bold text-2xl md:text-4xl"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            Semi-automatic Transformer Test Bench
+          </h1>
+          <div class="mt-4 md:mt-5" data-aos="fade-right" data-aos-delay="150">
+            <p
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
+            >
+              Electrosoft’s Semi-Automatic Transformer Testing System offers the
+              perfect balance of control, efficiency, and reliability. Designed
+              with a robust PLC and HMI-based interface, it enables smooth,
+              accurate execution of all critical transformer tests with just
+              three simple connections. Ideal for manufacturers seeking
+              dependable performance with room to scale.
+            </p>
+          </div>
+          <button
+            onclick="openPopup('AIPowered')"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2 rounded-sm shadow-2xl transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+          style="
+            background-image: url('assets/images/Semi\ Automatic.png');
+            background-size: cover;
+          "
+          data-aos="fade-left"
+          data-aos-delay="200"
+        ></div>
+      </div>
+      <!-- Trolly4 -->
+      <div
+        class="pt-0 pb-10 md:pt-40 w-full flex flex-col md:flex-row-reverse justify-between"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0 md:ml-10"
+          data-aos="fade-left"
+        >
+          <h1
+            class="font-bold text-2xl md:text-4xl"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            Conventional Transformer Test Bench
+          </h1>
+          <div class="mt-4 md:mt-5" data-aos="fade-left" data-aos-delay="150">
+            <p class="text-base md:text-lg text-left text-[#4C4C4C] pr-0">
+              Electrosoft’s Conventional Transformer Testing System delivers
+              dependable, cost-effective testing with complete manual control.
+              Featuring a rugged design and joystick-controlled excitation, it’s
+              ideal for low- to medium-volume manufacturers and R&D labs seeking
+              reliable performance without compromising precision or standards
+              compliance.
+            </p>
+          </div>
+          <button
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:mr-20 order-1 md:order-2 rounded-sm shadow-2xl transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+          style="
+            background-image: url('assets/images/convenstional.jpg');
+            background-size: cover;
+          "
+          data-aos="fade-right"
+          data-aos-delay="200"
+        ></div>
+      </div>
+      <!-- Trolly5 -->
+      <div
+        class="pt-0 pb-10 md:pt-20 w-full flex flex-col md:flex-row justify-between"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-full md:w-1/2 order-2 md:order-1 mt-6 md:mt-0"
+          data-aos="fade-right"
+        >
+          <h1
+            class="font-bold text-2xl md:text-4xl"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            Low Voltage Test trolley
+          </h1>
+          <div class="mt-4 md:mt-5" data-aos="fade-right" data-aos-delay="150">
+            <p
+              class="text-base md:text-lg text-left text-[#4C4C4C] pr-0 md:pr-20"
+            >
+              Electrosoft’s LV Test Trolley is a compact, mobile solution
+              designed to streamline low-voltage transformer testing. Built for
+              durability and seamless integration with any of our test systems,
+              it brings unmatched flexibility, reduces setup time, and improves
+              efficiency across your testing floor. Built for durability and
+              seamless integration with any of our test systems, it brings
+              unmatched flexibility.
+            </p>
+          </div>
+          <button
+            onclick="openPopup('AIPowered')"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </button>
+        </div>
+        <div
+          class="w-full md:w-1/2 h-48 md:h-auto bg-contain bg-no-repeat ml-0 md:ml-20 order-1 md:order-2 rounded-sm shadow-2xl transition-all duration-500 hover:shadow-xl hover:scale-[1.02]"
+          style="
+            background-image: url('assets/images/convenstional.jpg');
+            background-size: cover;
+          "
+          data-aos="fade-left"
+          data-aos-delay="200"
+        ></div>
+      </div>
     </section>
 
     <!-- comparison Chart -->
@@ -453,8 +770,11 @@ standards compliance.
               <div class="text-sm opacity-90 mb-4 min-h-[40px]">
                 Fully Automatic with AI & Voice Control
               </div>
-              <a href="mailto:sales@electrosoftindia.com?subject=Inquiry about AI-Powered Trolley&body=Hello,%20I%20am%20interested%20in%20the%20AI-Powered%20Advanced%20Transformer%20Testing%20Trolley.%20Please%20send%20me%20the%20brochure%20and%20pricing%20details." class="bg-black hover:bg-[#333333] text-white italic px-4 py-2 rounded-lg border-2 border-black hover:border-[#333333] transition-colors w-full max-w-[160px] mx-auto text-sm font-medium text-center block">
-               Inquire Now
+              <a
+                href="mailto:sales@electrosoftindia.com?subject=Inquiry about AI-Powered Trolley&body=Hello,%20I%20am%20interested%20in%20the%20AI-Powered%20Advanced%20Transformer%20Testing%20Trolley.%20Please%20send%20me%20the%20brochure%20and%20pricing%20details."
+                class="bg-black hover:bg-[#333333] text-white italic px-4 py-2 rounded-lg border-2 border-black hover:border-[#333333] transition-colors w-full max-w-[160px] mx-auto text-sm font-medium text-center block"
+              >
+                Inquire Now
               </a>
             </th>
             <th class="p-4 text-center border-r border-white/20 min-w-[180px]">
@@ -541,7 +861,7 @@ standards compliance.
               100 KVA - 750 MVA
             </td>
             <td class="p-4 text-center min-w-[180px] font-medium">
-              Up to 100 KVA 
+              Up to 100 KVA
             </td>
           </tr>
           <tr class="border-b border-gray-200 hover:bg-gray-50">
@@ -600,22 +920,22 @@ standards compliance.
                 >43" Inch Display</span
               >
             </td>
-            <td class="p-4 text-center min-w-[180px] ">
+            <td class="p-4 text-center min-w-[180px]">
               <span
                 class="inline-block bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-semibold"
                 >32" Inch Display</span
               >
             </td>
-            <td class="p-4 text-center min-w-[180px] ">
+            <td class="p-4 text-center min-w-[180px]">
               <span
                 class="inline-block bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-semibold"
                 >15" Inch Display</span
               >
             </td>
-             <td class="p-4 text-center min-w-[180px] text-gray-500">
+            <td class="p-4 text-center min-w-[180px] text-gray-500">
               ✗ Not Available
             </td>
-            <td class="p-4 text-center min-w-[180px] ">
+            <td class="p-4 text-center min-w-[180px]">
               <span
                 class="inline-block bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-semibold"
                 >7" Inch Display</span
@@ -679,7 +999,7 @@ standards compliance.
                 >Optional</span
               >
             </td>
-           <td class="p-4 text-center min-w-[180px]">
+            <td class="p-4 text-center min-w-[180px]">
               <span
                 class="inline-block bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold"
                 >Optional</span
@@ -720,7 +1040,7 @@ standards compliance.
                 >✓ Compliant</span
               >
             </td>
-             <td class="p-4 text-center min-w-[180px]">
+            <td class="p-4 text-center min-w-[180px]">
               <span
                 class="inline-block bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm font-semibold"
                 >✓ Compliant</span
@@ -832,7 +1152,7 @@ standards compliance.
       </div>
     </section>
 
-    <!-- Clients Carousel Section -->
+    <!-- Clients Section -->
     <section class="py-10 md:py-12 px-4 md:px-28">
       <div class="container mx-auto">
         <div class="h-2 w-16 md:h-2.5 md:w-24 bg-black my-4 md:my-6"></div>
@@ -931,15 +1251,13 @@ standards compliance.
               />
             </div>
           </div>
-          </div>
-        
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-12 pb-8 px-4 md:px-12 md:mt-20">
-        <div class="container mx-auto">
+      <div class="container mx-auto">
         <!-- Footer Columns -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <!-- Company Info -->
@@ -1211,8 +1529,7 @@ standards compliance.
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Script -->
     <script src="js/script.js"></script>
   </body>
 </html>
