@@ -211,20 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { label: "Warranty & Support", value: "18 Months" },
       ],
     },
-    lv: {
-      title: "LV Test Trolley",
-      features: [
-        { label: "Transformer Range", value: "N/A" },
-        { label: "AI-Powered Testing", value: "✗" },
-        { label: "Voice Control", value: "✗" },
-        { label: '43" Interactive Display', value: "✗" },
-        { label: "Fully Automatic Testing", value: "✗" },
-        { label: "Pneumatic CT-PT Selection", value: "✗" },
-        { label: "IEC/IEEE Compliance", value: "✗" },
-        { label: "Remote Monitoring", value: "✗" },
-        { label: "Warranty & Support", value: "18 Months" },
-      ],
-    },
   };
 
   const selector = document.getElementById("trolley-selector");
