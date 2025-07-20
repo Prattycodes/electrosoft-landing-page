@@ -18,7 +18,7 @@ function closePopup() {
 
 const popupContents = {
   AIPowered: {
-    title: "AI Powered Advanced Fully Automatic Transformer Test bench",
+    title: "Advanced Fully Automatic Transformer Test bench",
     content: `
       <div>
         <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
