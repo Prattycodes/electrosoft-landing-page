@@ -62,34 +62,35 @@
         class="flex justify-between items-center h-full px-4 md:px-10 text-base md:text-[17px] text-[#4C4C4C] font-medium relative"
       >
         <!-- Logo and Mobile Menu Button -->
-        <div class="flex items-center">
-          <!-- Mobile Menu Button -->
-          <button
-            id="mobile-menu-button"
-            class="mr-4 md:hidden focus:outline-none"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+        <div class="items-center">
           <!-- Logo -->
           <img
             src="assets/images/logo.png"
             alt="Electrosoft Logo"
-            class="h-8 md:h-7.5 w-auto"
+            class="h-6 md:h-7 w-auto cursor-pointer"
+            id="site-logo"
           />
         </div>
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="ml-24 md:hidden focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
 
         <!-- Navigation Links -->
         <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-10">
@@ -211,8 +212,8 @@
           </div>
         </div>
         <a
-          href="#footer"
-          class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          id="contact-link"
+          class="hover:text-gray-400 hidden md:block transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out cursor-pointer"
           >Contact Us</a
         >
       </div>

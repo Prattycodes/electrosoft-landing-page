@@ -250,3 +250,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//Smooth Scrolling
+function smoothScrollTo(targetY, duration = 1200) {
+  const startY = window.scrollY;
+  const changeY = targetY - startY;
+  const startTime = performance.now();
+
+  function animateScroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    window.scrollTo(0, startY + changeY * easeInOutQuad(progress));
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  function easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  }
+
+  requestAnimationFrame(animateScroll);
+}
+
+// Scroll to top when logo is clicked
+document.getElementById("site-logo").addEventListener("click", function () {
+  smoothScrollTo(0);
+});
+
+// Scroll to footer when Contact Us is clicked
+document.getElementById("contact-link").addEventListener("click", function (e) {
+  e.preventDefault();
+  const footer = document.getElementById("footer");
+  if (footer) {
+    smoothScrollTo(footer.getBoundingClientRect().top + window.scrollY, 1200);
+  }
+});

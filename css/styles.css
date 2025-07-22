@@ -45,3 +45,12 @@ body {
     }
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.highlight-footer {
+  box-shadow: 0 0 30px 10px #e6f7ff;
+  transition: box-shadow 0.5s;
+}
