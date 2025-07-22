@@ -35,10 +35,10 @@
   </head>
 
   <body class="bg-gray-50 overflow-x-hidden">
-    <!-- Upper Header -->
+    <!-- Upper Header Hidden-->
     <header
       id="upper-header"
-      class="w-full h-auto md:h-[30px] bg-[#ededed] py-1 md:py-0 transition-all duration-300 ease-in-out transform"
+      class="w-full h-auto md:h-[30px] bg-[#ededed] hidden py-1 md:py-0 transition-all duration-300 ease-in-out transform"
     >
       <div
         class="flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-10 text-sm md:text-[14px] text-[#4C4C4C] font-medium"
@@ -59,7 +59,7 @@
       class="w-full h-[60px] bg-white shadow sticky top-0 z-50"
     >
       <div
-        class="flex justify-between items-center h-full px-4 md:px-12 text-base md:text-[17px] text-[#4C4C4C] font-medium relative"
+        class="flex justify-between items-center h-full px-4 md:px-10 text-base md:text-[17px] text-[#4C4C4C] font-medium relative"
       >
         <!-- Logo and Mobile Menu Button -->
         <div class="flex items-center">
@@ -85,14 +85,14 @@
           </button>
           <!-- Logo -->
           <img
-            src="assets/images/favicon.png"
+            src="assets/images/logo.png"
             alt="Electrosoft Logo"
-            class="h-8 md:h-10 w-auto"
+            class="h-8 md:h-7.5 w-auto"
           />
         </div>
 
         <!-- Navigation Links -->
-        <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-6">
+        <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-10">
           <a
             href="#"
             class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
@@ -115,7 +115,7 @@
             href="#"
             class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
           >
-            Sustainability</a
+            Gallery</a
           >
           <a
             href="#"
@@ -134,13 +134,13 @@
             <a href="#" class="py-2 hover:text-gray-400">Products</a>
             <a href="#" class="py-2 hover:text-gray-400">Industries</a>
             <a href="#" class="py-2 hover:text-gray-400">Service</a>
-            <a href="#" class="py-2 hover:text-gray-400">Sustainability</a>
+            <a href="#" class="py-2 hover:text-gray-400">Gallery</a>
             <a href="#" class="py-2 hover:text-gray-400">About Us</a>
           </div>
         </div>
 
-        <!-- Search Container -->
-        <div class="flex items-center">
+        <!-- Search Container Hidden-->
+        <div class="flex items-center hidden">
           <!-- Search Icon -->
           <button id="search-toggle" class="ml-2 md:ml-6 focus:outline-none">
             <svg
@@ -210,6 +210,11 @@
             </div>
           </div>
         </div>
+        <a
+          href="#footer"
+          class="hover:text-gray-400 transform hover:-translate-y-1 hover:scale-105 transition duration-200 ease-in-out"
+          >Contact Us</a
+        >
       </div>
     </header>
 
@@ -969,7 +974,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-8 px-4 md:px-12 md:mt-20">
+    <footer
+      id="footer"
+      class="bg-gray-900 text-white pt-12 pb-8 px-4 md:px-12 md:mt-20"
+    >
       <div class="container mx-auto">
         <!-- Footer Columns -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
