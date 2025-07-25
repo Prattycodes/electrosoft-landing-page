@@ -281,6 +281,7 @@ document.getElementById("site-logo").addEventListener("click", function () {
 // Scroll to footer when Contact Us is clicked
 document.getElementById("contact-link").addEventListener("click", function (e) {
   e.preventDefault();
+  console.log("Inside");
   const footer = document.getElementById("footer");
   if (footer) {
     smoothScrollTo(footer.getBoundingClientRect().top + window.scrollY, 1200);
