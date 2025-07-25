@@ -62,15 +62,26 @@
         class="flex justify-between items-center h-full px-4 md:px-10 text-base md:text-[17px] text-black font-medium relative"
       >
         <!-- Logo and Mobile Menu Button -->
-        <div class="items-center">
+        <div class="flex items-center space-x-2">
           <!-- Logo -->
           <img
-            src="assets/images/logo.png"
+            src="assets/images/favicon.png"
             alt="Electrosoft Logo"
-            class="h-6 md:h-8 w-auto cursor-pointer"
+            class="h-11 w-auto cursor-pointer"
             id="site-logo"
           />
+
+          <!-- Text: Company Name, two lines like the image -->
+          <div class="flex flex-col leading-tight">
+            <span class="font-normal text-sm md:text-base text-[#212121]"
+              >Electrosoft Automation</span
+            >
+            <span class="font-normal text-sm md:text-base text-[#212121]"
+              >Pvt. Ltd.</span
+            >
+          </div>
         </div>
+
         <!-- Mobile Menu Button -->
         <button
           id="mobile-menu-button"
@@ -409,8 +420,8 @@
           </button>
         </div>
         <div
-          class="w-full md:w-1/2 h-48 md:h-auto bg-gray-100 bg-contain bg-no-repeat ml-0 md:mr-20 order-1 md:order-2 rounded-sm shadow-2xl"
-          style="background-image: url('assets/images/Semi\ Automatic.png')"
+          class="w-full md:w-1/2 h-48 md:h-auto bg-gray-100 bg-cover bg-center bg-no-repeat ml-0 md:mr-20 order-1 md:order-2 rounded-sm shadow-2xl"
+          style="background-image: url('assets/images/coventional-trolly.webp')"
         ></div>
       </div>
       <!-- Trolly 5 -->
