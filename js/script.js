@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScroll = currentScroll;
   });
 
+  //Client carousel
   const carousel = document.querySelector(".animate-scroll");
 
   // Make sure the animation runs smoothly when reaching the end
@@ -290,4 +291,17 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
   if (footer) {
     smoothScrollTo(footer.getBoundingClientRect().top + window.scrollY, 1200);
   }
+});
+
+//Client Animation JS
+const carousel = document.querySelector(".animate-scroll");
+const clientLogos = document.querySelectorAll(".client-logo");
+
+clientLogos.forEach((logo) => {
+  logo.addEventListener("mouseenter", () => {
+    carousel.style.animationPlayState = "paused";
+  });
+  logo.addEventListener("mouseleave", () => {
+    carousel.style.animationPlayState = "running";
+  });
 });
