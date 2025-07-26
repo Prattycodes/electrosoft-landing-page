@@ -77,3 +77,13 @@ html {
   border-top: 8px solid #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
 }
+
+/* Hide scrollbar (for WebKit browsers) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

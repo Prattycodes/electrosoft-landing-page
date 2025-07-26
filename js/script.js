@@ -295,8 +295,9 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
 
 //Client Animation JS
 const carousel = document.querySelector(".animate-scroll");
-const clientLogos = document.querySelectorAll(".client-logo");
 
+// Pause animation on any logo hover (existing code)
+const clientLogos = document.querySelectorAll(".client-logo");
 clientLogos.forEach((logo) => {
   logo.addEventListener("mouseenter", () => {
     carousel.style.animationPlayState = "paused";
@@ -304,4 +305,27 @@ clientLogos.forEach((logo) => {
   logo.addEventListener("mouseleave", () => {
     carousel.style.animationPlayState = "running";
   });
+});
+
+// Pause animation on touch drag, resume on end
+let isTouching = false;
+
+carousel.addEventListener("touchstart", () => {
+  isTouching = true;
+  carousel.style.animationPlayState = "paused";
+});
+
+carousel.addEventListener("touchmove", () => {
+  if (!isTouching) return;
+  carousel.style.animationPlayState = "paused";
+});
+
+carousel.addEventListener("touchend", () => {
+  isTouching = false;
+  carousel.style.animationPlayState = "running";
+});
+
+carousel.addEventListener("touchcancel", () => {
+  isTouching = false;
+  carousel.style.animationPlayState = "running";
 });
