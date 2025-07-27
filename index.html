@@ -898,25 +898,30 @@
 
         <!-- Client Logos Container -->
         <div
-          class="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 py-8 md:gap-x-20 md:gap-y-16"
+          class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-x-6 gap-y-12 sm:gap-x-20 sm:gap-y-16 py-8 justify-items-center"
         >
           <!-- Mahavitaran -->
-          <div class="relative group client-logo">
+          <div
+            class="relative group client-logo cursor-pointer"
+            data-client="mahavitaran"
+          >
             <img
               src="assets/images/mahavitaran_client.png"
               alt="Mahavitaran"
-              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300"
             />
             <div
-              class="pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-80 max-w-sm -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-blue-50 to-white text-gray-900 shadow-2xl border border-blue-200 rounded-xl p-5 animate-slideUp transition-all duration-400"
+              class="tooltip pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-72 max-w-[85vw] -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-blue-50 to-white text-gray-900 shadow-2xl border border-blue-200 rounded-xl p-4 animate-slideUp transition-all duration-400"
             >
               <div class="flex items-center mb-3">
                 <div class="w-3 h-3 bg-blue-600 rounded-full mr-2"></div>
-                <div class="font-bold text-lg text-blue-800">
+                <div class="font-bold text-sm sm:text-lg text-blue-800">
                   MAHAVITARAN-MSEDCL
                 </div>
               </div>
-              <div class="text-sm text-gray-700 leading-relaxed mb-3">
+              <div
+                class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3"
+              >
                 <strong>Project:</strong> Fully Automatic Transformer Testing
                 System
               </div>
@@ -934,20 +939,27 @@
           </div>
 
           <!-- Nucon -->
-          <div class="relative group client-logo">
+          <div
+            class="relative group client-logo cursor-pointer"
+            data-client="nucon"
+          >
             <img
               src="assets/images/nucon_client.png"
               alt="Nucon"
-              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300"
             />
             <div
-              class="pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-80 max-w-sm -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-green-50 to-white text-gray-900 shadow-2xl border border-green-200 rounded-xl p-5 animate-slideUp transition-all duration-400"
+              class="tooltip pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-72 max-w-[85vw] -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-green-50 to-white text-gray-900 shadow-2xl border border-green-200 rounded-xl p-4 animate-slideUp transition-all duration-400"
             >
               <div class="flex items-center mb-3">
                 <div class="w-3 h-3 bg-green-600 rounded-full mr-2"></div>
-                <div class="font-bold text-lg text-green-800">NUCON</div>
+                <div class="font-bold text-sm sm:text-lg text-green-800">
+                  NUCON
+                </div>
               </div>
-              <div class="text-sm text-gray-700 leading-relaxed mb-3">
+              <div
+                class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3"
+              >
                 <strong>Project:</strong> Advanced Power Plant Control Systems
               </div>
               <div class="text-xs text-gray-600 space-y-1">
@@ -968,20 +980,27 @@
           </div>
 
           <!-- Tata Power -->
-          <div class="relative group client-logo">
+          <div
+            class="relative group client-logo cursor-pointer"
+            data-client="tata"
+          >
             <img
               src="assets/images/tataPower_client.png"
               alt="Tata Power"
-              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300"
             />
             <div
-              class="pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-80 max-w-sm -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-purple-50 to-white text-gray-900 shadow-2xl border border-purple-200 rounded-xl p-5 animate-slideUp transition-all duration-400"
+              class="tooltip pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-72 max-w-[85vw] -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-purple-50 to-white text-gray-900 shadow-2xl border border-purple-200 rounded-xl p-4 animate-slideUp transition-all duration-400"
             >
               <div class="flex items-center mb-3">
                 <div class="w-3 h-3 bg-purple-600 rounded-full mr-2"></div>
-                <div class="font-bold text-lg text-purple-800">TATA POWER</div>
+                <div class="font-bold text-sm sm:text-lg text-purple-800">
+                  TATA POWER
+                </div>
               </div>
-              <div class="text-sm text-gray-700 leading-relaxed mb-3">
+              <div
+                class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3"
+              >
                 <strong>Project:</strong> Smart Grid Infrastructure Solutions
               </div>
               <div class="text-xs text-gray-600 space-y-1">
@@ -1003,22 +1022,27 @@
           </div>
 
           <!-- Crompton Greens -->
-          <div class="relative group client-logo">
+          <div
+            class="relative group client-logo cursor-pointer"
+            data-client="crompton"
+          >
             <img
               src="assets/images/cromptonGreens_client.png"
               alt="Crompton Greens"
-              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+              class="h-14 md:h-20 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300"
             />
             <div
-              class="pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-80 max-w-sm -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-orange-50 to-white text-gray-900 shadow-2xl border border-orange-200 rounded-xl p-5 animate-slideUp transition-all duration-400"
+              class="tooltip pointer-events-none absolute z-10 left-1/2 bottom-full mb-3 w-72 max-w-[85vw] -translate-x-1/2 scale-95 opacity-0 group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 bg-gradient-to-br from-orange-50 to-white text-gray-900 shadow-2xl border border-orange-200 rounded-xl p-4 animate-slideUp transition-all duration-400"
             >
               <div class="flex items-center mb-3">
                 <div class="w-3 h-3 bg-orange-600 rounded-full mr-2"></div>
-                <div class="font-bold text-lg text-orange-800">
+                <div class="font-bold text-sm sm:text-lg text-orange-800">
                   CROMPTON GREENS
                 </div>
               </div>
-              <div class="text-sm text-gray-700 leading-relaxed mb-3">
+              <div
+                class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3"
+              >
                 <strong>Project:</strong> Automated Testing & Quality Control
                 Systems
               </div>
@@ -1037,6 +1061,24 @@
                 class="absolute top-full left-1/2 transform -translate-x-1/2 border-8 border-transparent border-t-orange-200"
               ></div>
             </div>
+          </div>
+        </div>
+
+        <!-- Client Modal Overlay -->
+        <div
+          id="clientModal"
+          class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center hidden"
+        >
+          <div
+            class="bg-white max-w-xs w-[90vw] rounded-2xl shadow-2xl border p-5 relative text-gray-900"
+          >
+            <button
+              id="closeModal"
+              class="absolute -top-4 -right-4 text-white bg-black rounded-full w-8 h-8 flex items-center justify-center text-2xl z-60"
+            >
+              &times;
+            </button>
+            <div id="modalContent"></div>
           </div>
         </div>
       </div>

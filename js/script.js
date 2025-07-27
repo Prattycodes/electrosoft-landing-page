@@ -303,49 +303,81 @@ clientLogos.forEach((logo) => {
   });
 });
 
-// Pause animation on touch drag, resume on end
-let isTouching = false;
+const modal = document.getElementById("clientModal");
+const modalContent = document.getElementById("modalContent");
+const closeModal = document.getElementById("closeModal");
+const modalContents = {
+  mahavitaran: `
+    <div class="flex items-center mb-3">
+      <div class="w-3 h-3 bg-blue-600 rounded-full mr-2"></div>
+      <div class="font-bold text-lg text-blue-800">MAHAVITARAN-MSEDCL</div>
+    </div>
+    <div class="text-sm text-gray-700 leading-relaxed mb-3">
+      <strong>Project:</strong> Fully Automatic Transformer Testing System
+    </div>
+    <div class="text-xs text-gray-600 space-y-1">
+      <div>• <strong>Rating:</strong> Up to 1500 kVA / 33 kV</div>
+      <div>• <strong>Features:</strong> Cutting-edge automation</div>
+      <div>• <strong>Benefits:</strong> Unmatched precision & reliability</div>
+    </div>
+  `,
+  nucon: `
+    <div class="flex items-center mb-3">
+      <div class="w-3 h-3 bg-green-600 rounded-full mr-2"></div>
+      <div class="font-bold text-lg text-green-800">NUCON</div>
+    </div>
+    <div class="text-sm text-gray-700 leading-relaxed mb-3">
+      <strong>Project:</strong> Advanced Power Plant Control Systems
+    </div>
+    <div class="text-xs text-gray-600 space-y-1">
+      <div>• <strong>Scope:</strong> Complete automation solutions</div>
+      <div>• <strong>Technology:</strong> State-of-the-art control panels</div>
+      <div>• <strong>Impact:</strong> Enhanced operational efficiency</div>
+    </div>
+  `,
+  tata: `
+    <div class="flex items-center mb-3">
+      <div class="w-3 h-3 bg-purple-600 rounded-full mr-2"></div>
+      <div class="font-bold text-lg text-purple-800">TATA POWER</div>
+    </div>
+    <div class="text-sm text-gray-700 leading-relaxed mb-3">
+      <strong>Project:</strong> Smart Grid Infrastructure Solutions
+    </div>
+    <div class="text-xs text-gray-600 space-y-1">
+      <div>• <strong>Implementation:</strong> Multi-site deployment</div>
+      <div>• <strong>Technology:</strong> IoT-enabled monitoring systems</div>
+      <div>• <strong>Result:</strong> Improved grid stability & efficiency</div>
+    </div>
+  `,
+  crompton: `
+    <div class="flex items-center mb-3">
+      <div class="w-3 h-3 bg-orange-600 rounded-full mr-2"></div>
+      <div class="font-bold text-lg text-orange-800">CROMPTON GREENS</div>
+    </div>
+    <div class="text-sm text-gray-700 leading-relaxed mb-3">
+      <strong>Project:</strong> Automated Testing & Quality Control Systems
+    </div>
+    <div class="text-xs text-gray-600 space-y-1">
+      <div>• <strong>Solution:</strong> Comprehensive testing equipment</div>
+      <div>• <strong>Features:</strong> Real-time quality monitoring</div>
+      <div>• <strong>Outcome:</strong> Enhanced product reliability</div>
+    </div>
+  `,
+};
 
-carousel.addEventListener("touchstart", () => {
-  isTouching = true;
-  carousel.style.animationPlayState = "paused";
-});
-
-carousel.addEventListener("touchmove", () => {
-  if (!isTouching) return;
-  carousel.style.animationPlayState = "paused";
-});
-
-carousel.addEventListener("touchend", () => {
-  isTouching = false;
-  carousel.style.animationPlayState = "running";
-});
-
-carousel.addEventListener("touchcancel", () => {
-  isTouching = false;
-  carousel.style.animationPlayState = "running";
-});
-
-// Interactive tabs functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".client-tab");
-  const panels = document.querySelectorAll(".client-panel");
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
-      const target = this.getAttribute("data-client");
-
-      // Remove active classes
-      tabs.forEach((t) => {
-        t.classList.remove("active", "bg-blue-600", "text-white");
-        t.classList.add("bg-gray-100", "text-gray-600");
-      });
-      panels.forEach((p) => p.classList.remove("active"));
-
-      // Add active classes
-      this.classList.add("active", "bg-blue-600", "text-white");
-      this.classList.remove("bg-gray-100", "text-gray-600");
-      document.getElementById(target).classList.add("active");
-    });
+// Show modal on logo tap (only on mobile)
+document.querySelectorAll(".client-logo").forEach((div) => {
+  div.addEventListener("click", function (e) {
+    if (window.innerWidth < 640) {
+      // For mobile screens
+      const clientKey = this.getAttribute("data-client");
+      modalContent.innerHTML = modalContents[clientKey] || "";
+      modal.classList.remove("hidden");
+    }
   });
+});
+
+closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) modal.classList.add("hidden");
 });

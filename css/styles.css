@@ -17,3 +17,9 @@ html {
   box-shadow: 0 0 30px 10px #e6f7ff;
   transition: box-shadow 0.5s;
 }
+
+@media (max-width: 639px) {
+  .group .tooltip {
+    display: none !important;
+  }
+}
