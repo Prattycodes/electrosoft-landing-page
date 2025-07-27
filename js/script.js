@@ -42,10 +42,6 @@ const popupContents = {
             <p class="text-[#4C4C4C]">100 KVA, 433V up to 750 MVA, 420 kV</p>
           </div>
           <div>
-            <p class="font-medium">Testing Accuracy:</p>
-            <p class="text-[#4C4C4C]">±0.1%</p>
-          </div>
-          <div>
             <p class="font-medium">Compliance:</p>
             <p class="text-[#4C4C4C]">IEC 60076, IEEE C57.12</p>
           </div>
@@ -328,4 +324,28 @@ carousel.addEventListener("touchend", () => {
 carousel.addEventListener("touchcancel", () => {
   isTouching = false;
   carousel.style.animationPlayState = "running";
+});
+
+// Interactive tabs functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".client-tab");
+  const panels = document.querySelectorAll(".client-panel");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const target = this.getAttribute("data-client");
+
+      // Remove active classes
+      tabs.forEach((t) => {
+        t.classList.remove("active", "bg-blue-600", "text-white");
+        t.classList.add("bg-gray-100", "text-gray-600");
+      });
+      panels.forEach((p) => p.classList.remove("active"));
+
+      // Add active classes
+      this.classList.add("active", "bg-blue-600", "text-white");
+      this.classList.remove("bg-gray-100", "text-gray-600");
+      document.getElementById(target).classList.add("active");
+    });
+  });
 });

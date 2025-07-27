@@ -87,3 +87,23 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.client-panel {
+  display: none;
+}
+
+.client-panel.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
