@@ -140,17 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScroll = currentScroll;
   });
 
-  //Client carousel
-  const carousel = document.querySelector(".animate-scroll");
-
-  // Make sure the animation runs smoothly when reaching the end
-  carousel.addEventListener("animationiteration", () => {
-    // Reset position to avoid jump
-    carousel.style.animation = "none";
-    carousel.offsetHeight; // Trigger reflow
-    carousel.style.animation = "";
-  });
-
   const featureData = {
     ai: {
       title: "AI-Powered Advanced",
@@ -217,6 +206,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const selector = document.getElementById("trolley-selector");
   const display = document.getElementById("mobile-trolley-info");
 
+  // Initialize with default
+  updateTrolleyInfo("ai");
+
   function updateTrolleyInfo(key) {
     const data = featureData[key];
     display.innerHTML = `
@@ -235,9 +227,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
       `;
   }
-
-  // Initialize with default
-  updateTrolleyInfo("ai");
 
   // Change on selection
   selector.addEventListener("change", (e) => {
