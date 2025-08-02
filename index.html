@@ -234,7 +234,7 @@
     <!-- Hero Banner -->
     <section
       id="hero"
-      class="relative w-full h-[60vh] hidden md:h-[120vh] bg-cover bg-center bg-no-repeat"
+      class="relative w-full h-[60vh] block md:hidden md:h-[120vh] bg-cover bg-center bg-no-repeat"
       style="background-image: url('assets/images/transformer_hero.webp')"
     >
       <!-- Dark Overlay -->
@@ -264,18 +264,18 @@
 
     <!-- New Hero Page  -->
     <div
-      class="flex items-center justify-left min-h-[500px] bg-gray-50 relative pl-0 md:pl-40 pt-8 md:pt-16"
+      class="flex items-center justify-center md:min-h-[550px] bg-gray-50 relative py-0 md:py-14 hidden md:flex max-w-screen-2xl mx-auto bg-pink-300"
     >
       <!-- Background Image -->
       <img
         src="assets/images/transformer_hero.webp"
         alt="Transformer"
-        class="w-full max-w-2xl md:max-w-4xl h-[420px] md:h-[540px] object-cover rounded-3xl shadow-lg"
+        class="w-full max-w-xl md:max-w-3xl h-[500px] object-cover md:rounded-3xl md:shadow-2xl md:-translate-x-20"
       />
 
       <!-- Card Overlay -->
       <div
-        class="absolute md:top-1/2 right-0 md:right-20 -translate-y-1/2 bg-white rounded-xl shadow-xl p-8 max-w-sm w-1/2 md:w-full mr-0 md:mr-20 text-right md:text-left mt-40 md:mt-0"
+        class="absolute md:top-[45%] right-0 md:right-[5%] -translate-y-1/2 bg-white rounded-xl shadow-2xl p-4 md:p-10 max-w-sm w-[40%] md:w-full text-right md:text-left -translate-x-2 md:-translate-x-20"
       >
         <span class="text-sm text-gray-500 tracking-widest uppercase block"
           >Discover</span
@@ -288,12 +288,12 @@
           Suite
         </h2>
         <button
-          class="mt-8 px-6 py-2 border hidden md:block border-black text-black rounded transition hover:bg-black hover:text-white"
+          class="mt-5 px-6 py-2 border hidden md:block border-black text-black rounded transition hover:bg-black hover:text-white"
         >
           Download Brochure
         </button>
         <button
-          class="mt-8 px-6 py-2 border block md:hidden border-black text-black rounded transition hover:bg-black hover:text-white"
+          class="mt-5 px-6 py-2 border block md:hidden border-black text-black rounded transition hover:bg-black hover:text-white ml-auto"
         >
           Brochure
         </button>
@@ -303,16 +303,13 @@
     <!-- About -->
     <section
       id="about"
-      class="pt-8 md:pt-20 px-6 md:px-28 max-w-screen-2xl mx-auto"
+      class="pt-8 md:pt-20 px-6 md:px-28 max-w-screen-2xl mx-auto md:text-justify"
     >
       <div class="h-2 w-16 md:h-2.5 md:w-24 bg-black my-4 md:my-6"></div>
-      <h2 class="font-bold text-2xl md:text-4xl mb-4 md:mb-6 inline">
+      <h2 class="font-bold text-2xl md:text-4xl mb-4 md:mb-6 md:inline">
         Electrosoft Automation Pvt. Ltd.
       </h2>
-      <div
-        class="text-base md:text-lg text-[#4C4C4C] inline"
-        style="text-align: justify"
-      >
+      <div class="text-base md:text-lg text-[#4C4C4C] md:inline text-justify">
         is a leading provider of industrial-grade electrical testing systems.
         With a commitment to innovation and precision, we help industries ensure
         the reliability, safety, and performance of their electrical
@@ -1574,5 +1571,6 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/tailwind.config.js"></script>
   </body>
 </html>
