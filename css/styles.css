@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Rubik", sans-serif;
+  hyphens: auto;
 }
 /* Hide initially on mobile */
 @media (max-width: 767px) {
@@ -32,5 +33,3 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
-
-
