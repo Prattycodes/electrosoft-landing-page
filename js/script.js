@@ -370,3 +370,60 @@ closeModal.addEventListener("click", () => modal.classList.add("hidden"));
 modal.addEventListener("click", function (e) {
   if (e.target === modal) modal.classList.add("hidden");
 });
+
+// Progress Bar
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollContainer = document.getElementById("scroll-container");
+  const indicators = document.querySelectorAll(".progress-dot");
+  const cards = document.querySelectorAll("[data-card]");
+
+  if (!scrollContainer || indicators.length === 0 || cards.length === 0) {
+    console.log("Elements not found");
+    return;
+  }
+
+  function updateProgressBar() {
+    const scrollLeft = scrollContainer.scrollLeft;
+    const containerWidth = scrollContainer.clientWidth;
+
+    // Calculate which card is most visible
+    let activeIndex = 0;
+    let maxVisibility = 0;
+
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const containerRect = scrollContainer.getBoundingClientRect();
+
+      // Calculate how much of the card is visible
+      const cardLeft = cardRect.left - containerRect.left;
+      const cardRight = cardRect.right - containerRect.left;
+
+      const visibleStart = Math.max(0, cardLeft);
+      const visibleEnd = Math.min(containerWidth, cardRight);
+      const visibleWidth = Math.max(0, visibleEnd - visibleStart);
+      const visibility = visibleWidth / cardRect.width;
+
+      if (visibility > maxVisibility) {
+        maxVisibility = visibility;
+        activeIndex = index;
+      }
+    });
+
+    // Update indicators
+    indicators.forEach((indicator, index) => {
+      if (index === activeIndex) {
+        indicator.classList.remove("bg-gray-300");
+        indicator.classList.add("bg-black");
+      } else {
+        indicator.classList.remove("bg-black");
+        indicator.classList.add("bg-gray-300");
+      }
+    });
+  }
+
+  // Listen for scroll events
+  scrollContainer.addEventListener("scroll", updateProgressBar);
+
+  // Initial call to set the correct state
+  updateProgressBar();
+});

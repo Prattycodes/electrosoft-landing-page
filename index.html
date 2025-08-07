@@ -897,215 +897,267 @@
       </div>
     </section>
 
-    <!-- Mobile Comparison (Visible only on small screens) -->
-    <section class="block md:hidden px-0 py-10 bg-[#fafdff]">
-      <h2 class="text-xl font-bold mb-4 text-center">
+    <!-- Mobile Comparison (Visible only on small screens) 2.0 -->
+    <section class="block md:hidden px-0 py-10 bg-[#fafdff] relative">
+      <h2 class="text-xl font-bold mb-2 text-center">
         Compare Trolley Features
       </h2>
-      <div
-        class="flex space-x-5 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory px-4"
-      >
-        <!-- Card 1 -->
+
+      <!-- Scroll hint -->
+      <div class="text-center mb-4">
+        <p class="text-sm text-gray-500 flex items-center justify-center gap-2">
+          <span>Swipe to compare</span>
+          <svg
+            class="w-4 h-4 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </p>
+      </div>
+
+      <div class="relative">
         <div
-          class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
+          class="flex space-x-5 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory px-4"
+          id="scroll-container"
         >
-          <h3 class="text-lg font-bold mb-3 text-black">AI-Powered Advanced</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm">
-              <span>Transformer Range</span>
-              <span class="font-semibold">100 KVA - 750 MVA</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>AI-Powered Testing</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Voice Control</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Interactive Display</span>
-              <span class="font-semibold">43 Inch</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Manual Override Capability</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span
-                >Automation<br />
-                Level</span
-              >
-              <p class="font-semibold break-words text-right">
-                Fully Automatic <br />
-                with AI
-              </p>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>CT-PT <br />(Primary & Secondary)</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>IEC/IEEE Compliance</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Remote Monitoring</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Warranty</span>
-              <span class="font-semibold">18 Months</span>
-            </li>
-          </ul>
+          <!-- Card 1 -->
+          <div
+            class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
+            data-card="0"
+          >
+            <h3 class="text-lg font-bold mb-3 text-black">
+              AI-Powered Advanced
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between text-sm">
+                <span>Transformer Range</span>
+                <span class="font-semibold">100 KVA - 750 MVA</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>AI-Powered Testing</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Voice Control</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Interactive Display</span>
+                <span class="font-semibold">43 Inch</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Manual Override Capability</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Automation<br />Level</span>
+                <p class="font-semibold break-words text-right">
+                  Fully Automatic <br />
+                  with AI
+                </p>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>CT-PT <br />(Primary & Secondary)</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>IEC/IEEE Compliance</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Remote Monitoring</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Warranty</span>
+                <span class="font-semibold">18 Months</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
+            data-card="1"
+          >
+            <h3 class="text-lg font-bold mb-3 text-black">Fully Automatic</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between text-sm">
+                <span>Transformer Range</span>
+                <span class="font-semibold">100 KVA - 750 MVA</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>AI-Powered Testing</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Voice Control</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Interactive Display</span>
+                <span class="font-semibold">21 Inch</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Manual Override Capability</span>
+                <span class="font-semibold text-green-500 flex-end">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Automation Level</span>
+                <span class="font-semibold">Fully Automatic</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>CT-PT <br />(Primary & Secondary)</span>
+                <span class="font-semibold text-yellow-500">✓(Optional)</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>IEC/IEEE Compliance</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Remote Monitoring</span>
+                <span class="font-semibold text-yellow-500">✓ (Optional)</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Warranty</span>
+                <span class="font-semibold">18 Months</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
+            data-card="2"
+          >
+            <h3 class="text-lg font-bold mb-3 text-black">Semi-Automatic</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between text-sm">
+                <span>Transformer Range</span>
+                <span class="font-semibold">100 KVA - 750 MVA</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>AI-Powered Testing</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Voice Control</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Interactive Display</span>
+                <span class="font-semibold">15 Inch</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Manual Override Capability</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Automation Level</span>
+                <span class="font-semibold">Semi-Automatic</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>CT-PT <br />(Primary & Secondary)</span>
+                <span class="font-semibold text-yellow-500">✓ (Optional)</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>IEC/IEEE Compliance</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Remote Monitoring</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Warranty</span>
+                <span class="font-semibold">18 Months</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
+            data-card="3"
+          >
+            <h3 class="text-lg font-bold mb-3 text-black">Conventional</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between text-sm">
+                <span>Transformer Range</span>
+                <span class="font-semibold">100 KVA - 750 MVA</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>AI-Powered Testing</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Voice Control</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Interactive Display</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Manual Override Capability</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Automation Level</span>
+                <span class="font-semibold">Manual</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>CT-PT <br />(Primary & Secondary)</span>
+                <span class="font-semibold text-yellow-500">✓ (Optional)</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>IEC/IEEE Compliance</span>
+                <span class="font-semibold text-green-500">✓</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Remote Monitoring</span>
+                <span class="font-semibold text-red-500">✗</span>
+              </li>
+              <li class="flex justify-between text-sm">
+                <span>Warranty</span>
+                <span class="font-semibold">18 Months</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- Card 2 -->
+
+        <!-- Gradient overlay to show more content -->
         <div
-          class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-        >
-          <h3 class="text-lg font-bold mb-3 text-black">Fully Automatic</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm">
-              <span>Transformer Range</span>
-              <span class="font-semibold">100 KVA - 750 MVA</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>AI-Powered Testing</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Voice Control</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Interactive Display</span>
-              <span class="font-semibold">21 Inch</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Manual Override Capability</span>
-              <span class="font-semibold text-green-500 flex-end">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Automation Level</span>
-              <span class="font-semibold">Fully Automatic</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>CT-PT <br />(Primary & Secondary)</span>
-              <span class="font-semibold text-yellow-500">✓(Optional)</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>IEC/IEEE Compliance</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Remote Monitoring</span>
-              <span class="font-semibold text-yellow-500">✓ (Optional)</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Warranty</span>
-              <span class="font-semibold">18 Months</span>
-            </li>
-          </ul>
-        </div>
-        <!-- Card 3 -->
+          class="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-[#fafdff] via-[#fafdff]/50 to-transparent pointer-events-none"
+        ></div>
+      </div>
+
+      <!-- Progress indicator -->
+      <div class="flex justify-center space-x-2 mt-2" id="progress-indicators">
         <div
-          class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-        >
-          <h3 class="text-lg font-bold mb-3 text-black">Semi-Automatic</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm">
-              <span>Transformer Range</span>
-              <span class="font-semibold">100 KVA - 750 MVA</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>AI-Powered Testing</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Voice Control</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Interactive Display</span>
-              <span class="font-semibold">15 Inch</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Manual Override Capability</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Automation Level</span>
-              <span class="font-semibold">Semi-Automatic</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>CT-PT <br />(Primary & Secondary)</span>
-              <span class="font-semibold text-yellow-500">✓ (Optional)</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>IEC/IEEE Compliance</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Remote Monitoring</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Warranty</span>
-              <span class="font-semibold">18 Months</span>
-            </li>
-          </ul>
-        </div>
-        <!-- Card 4 -->
+          class="w-6 h-1 bg-gray-300 rounded-full progress-dot"
+          data-index="0"
+        ></div>
         <div
-          class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-        >
-          <h3 class="text-lg font-bold mb-3 text-black">Conventional</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm">
-              <span>Transformer Range</span>
-              <span class="font-semibold">100 KVA - 750 MVA</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>AI-Powered Testing</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Voice Control</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Interactive Display</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Manual Override Capability</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Automation Level</span>
-              <span class="font-semibold">Manual</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span
-                >CT-PT <br />
-                (Primary & Secondary)</span
-              >
-              <span class="font-semibold text-yellow-500">✓ (Optional)</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>IEC/IEEE Compliance</span>
-              <span class="font-semibold text-green-500">✓</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Remote Monitoring</span>
-              <span class="font-semibold text-red-500">✗</span>
-            </li>
-            <li class="flex justify-between text-sm">
-              <span>Warranty</span>
-              <span class="font-semibold">18 Months</span>
-            </li>
-          </ul>
-        </div>
+          class="w-6 h-1 bg-gray-300 rounded-full progress-dot"
+          data-index="1"
+        ></div>
+        <div
+          class="w-6 h-1 bg-gray-300 rounded-full progress-dot"
+          data-index="2"
+        ></div>
+        <div
+          class="w-6 h-1 bg-gray-300 rounded-full progress-dot"
+          data-index="3"
+        ></div>
       </div>
     </section>
 
