@@ -35,24 +35,6 @@
   </head>
 
   <body class="bg-gray-50 overflow-x-hidden">
-    <!-- Upper Header Hidden-->
-    <header
-      id="upper-header"
-      class="w-full h-auto md:h-[30px] bg-[#ededed] hidden py-1 md:py-0 transition-all duration-300 ease-in-out transform"
-    >
-      <div
-        class="flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-10 text-sm md:text-[14px] text-[#4C4C4C] font-medium"
-      >
-        <!-- Left -->
-        <p class="mb-1 md:mb-0">Electrosoft Automation Pvt. Ltd.</p>
-        <!-- Right -->
-        <div class="space-x-4">
-          <a href="#" class="hover:underline">Gallery</a>
-          <a href="#" class="hover:underline">Contact Us</a>
-        </div>
-      </div>
-    </header>
-
     <!-- Main Header -->
     <header
       id="main-header"
@@ -70,7 +52,7 @@
             class="h-11 w-auto"
           />
 
-          <!-- Text: Company Name, two lines like the image -->
+          <!-- Company Name -->
           <div class="flex flex-col leading-tight">
             <span class="font-normal text-sm md:text-base text-[#212121]"
               >Electrosoft Automation</span
@@ -150,77 +132,7 @@
           </div>
         </div>
 
-        <!-- Search Container Hidden-->
-        <div class="flex items-center hidden">
-          <!-- Search Icon -->
-          <button id="search-toggle" class="ml-2 md:ml-6 focus:outline-none">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-gray-600 hover:text-gray-400 transition duration-200"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-          <!-- Search Bar (hidden by default) -->
-          <div
-            id="search-bar"
-            class="absolute right-0 md:right-10 top-full hidden md:top-0 w-full md:w-[375px] bg-white transition-all duration-300 transform origin-top"
-          >
-            <div class="container mx-auto px-2 py-2 flex items-center">
-              <input
-                type="text"
-                placeholder="Search"
-                class="w-full py-2 mt-0.5 px-4 border-1 rounded-md border-gray-900 focus:outline-none text-M bg-white text-black"
-              />
-              <button
-                id="inside-search-toggle"
-                class="ml-2 md:ml-6 focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-gray-600 hover:text-gray-400 transition duration-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-              <button
-                id="close-search"
-                class="ml-4 text-gray-600 hover:text-gray-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
+        <!-- Contact Us Button -->
         <a
           href="#"
           id="contact-link"
@@ -231,7 +143,7 @@
       </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Banner Mobile only -->
     <section
       id="hero"
       class="relative w-full h-[60vh] block md:hidden md:h-[120vh] bg-cover bg-center bg-no-repeat"
