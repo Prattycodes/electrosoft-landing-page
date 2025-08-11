@@ -53,6 +53,148 @@ const popupContents = {
       </div>
     `,
   },
+  SemiAutomatic: {
+    title: "Semi-Automatic Transformer Test Bench",
+    content: `
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
+        <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
+          <li>PLC and HMI-based intuitive control and real-time monitoring</li>
+          <li>Perform all essential transformer tests with just three connections</li>
+          <li>Conforms to IEC and IEEE international testing standards</li>
+          <li>Downloadable test data from PLC for easy documentation</li>
+          <li>Optional Report Generation Software for professional reporting</li>
+          <li>Includes installation, commissioning, operator training, and 18-month warranty</li>
+          <li>Designed for accuracy, repeatability, and scalable growth</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Technical Specifications</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div>
+            <p class="font-medium">Transformer Range:</p>
+            <p class="text-[#4C4C4C]">100 KVA, 433V up to 750 MVA, 420 kV</p>
+          </div>
+          <div>
+            <p class="font-medium">Compliance:</p>
+            <p class="text-[#4C4C4C]">IEC 60076, IEEE C57.12</p>
+          </div>
+          <div>
+            <p class="font-medium">Warranty:</p>
+            <p class="text-[#4C4C4C]">18 Months</p>
+          </div>
+        </div>
+      </div>
+    `,
+  },
+  Conventional: {
+    title: "Conventional Transformer Test Bench",
+    content: `
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
+        <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
+          <li>Manual testing system with joystick-controlled excitation</li>
+          <li>Ergonomic layout with optimally mounted test instruments</li>
+          <li>Performs all essential tests in accordance with IEC and IEEE standards</li>
+          <li>* Ideal for low- to medium-volume production and R\&D environments
+* Cost-effective solution with full operational control</li>
+          <li>Includes installation, commissioning, operator training, and 18-month warranty</li>
+          <li>Built for accuracy, reliability, and long-term durability</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Technical Specifications</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div>
+            <p class="font-medium">Transformer Range:</p>
+            <p class="text-[#4C4C4C]">100 KVA, 433V up to 750 MVA, 420 kV</p>
+          </div>
+          <div>
+            <p class="font-medium">Compliance:</p>
+            <p class="text-[#4C4C4C]">IEC 60076, IEEE C57.12</p>
+          </div>
+          <div>
+            <p class="font-medium">Warranty:</p>
+            <p class="text-[#4C4C4C]">18 Months</p>
+          </div>
+        </div>
+      </div>
+    `,
+  },
+  LowVoltage: {
+    title: "Low Voltage Test Trolley",
+    content: `
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
+        <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
+          <li>Mobile trolley for easy transport of low-voltage test instruments</li>
+          <li>Seamlessly integrates with all Electrosoft transformer test systems</li>
+          <li>Reduces setup time and cable clutter for faster operations</li>
+          <li>Rugged industrial-grade construction for long-term durability</li>
+          <li>Optimized layout and cable management for smooth daily use</li>
+          <li>Ideal for multi-bay testing setups and frequent reconfigurations</li>
+          <li>Enhances efficiency, flexibility, and safety in transformer testing</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Technical Specifications</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div>
+            <p class="font-medium">Compatibility</p>
+            <p class="text-[#4C4C4C]">All Electrosoft transformer test systems</p>
+          </div>
+          <div>
+            <p class="font-medium">Construction:</p>
+            <p class="text-[#4C4C4C]">Industrial-grade, rugged design</p>
+          </div>
+          <div>
+            <p class="font-medium">Warranty:</p>
+            <p class="text-[#4C4C4C]">18 Months</p>
+          </div>
+        </div>
+      </div>
+    `,
+  },
+  FullyAutomatic: {
+    title: "Fully Automatic Transformer Test Bench",
+    content: `
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Advanced Features</h4>
+        <ul class="list-disc pl-5 space-y-2 mt-2 text-[#4C4C4C]">
+          <li>Fully automatic testing of all critical transformer parameters</li>
+          <li>Minimal connection changes for faster test cycles</li>
+          <li>Powered by intuitive and reliable X’mer Edge software</li>
+          <li>Built-in automatic report generation</li>
+          <li>Optional motorized isolators for heat run and HT capacitor bank switching</li>
+          <li>Optional pneumatically operated CT-PT primary selection</li>
+          <li>Optional Web Integration Module for live remote monitoring and visibility</li>
+          <li>Includes installation, operator training, and 18-month warranty</li>
+          <li>Engineered for maximum efficiency, accuracy, and long-term reliability</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold">Technical Specifications</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+          <div>
+            <p class="font-medium">Transformer Range:</p>
+            <p class="text-[#4C4C4C]">100 KVA, 433V up to 750 MVA, 420 kV</p>
+          </div>
+          <div>
+            <p class="font-medium">Compliance:</p>
+            <p class="text-[#4C4C4C]">IEC 60076, IEEE C57.12</p>
+          </div>
+          <div>
+            <p class="font-medium">Warranty:</p>
+            <p class="text-[#4C4C4C]">18 Months</p>
+          </div>
+        </div>
+      </div>
+    `,
+  },
 };
 
 document.addEventListener("DOMContentLoaded", function () {

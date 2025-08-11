@@ -306,7 +306,7 @@
             </p>
           </div>
           <button
-            onclick="openPopup('AIPowered')"
+            onclick="openPopup('FullyAutomatic')"
             class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
             Learn More
@@ -341,7 +341,7 @@
             </p>
           </div>
           <button
-            onclick="openPopup('AIPowered')"
+            onclick="openPopup('SemiAutomatic')"
             class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
             Learn More
@@ -374,7 +374,7 @@
             </p>
           </div>
           <button
-            onclick="openPopup('AIPowered')"
+            onclick="openPopup('Conventional')"
             class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
             Learn More
@@ -409,7 +409,7 @@
             </p>
           </div>
           <button
-            onclick="openPopup('AIPowered')"
+            onclick="openPopup('LowVoltage')"
             class="bg-black text-white px-4 py-1.5 md:px-5 md:py-2 mt-3 md:mt-4 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] text-sm md:text-base"
           >
             Learn More
@@ -425,33 +425,58 @@
     <!-- Popup Modal -->
     <div
       id="infoPopup"
-      class="flex fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+      class="flex fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm"
       data-aos="fade"
       data-aos-duration="300"
     >
       <div
-        class="bg-white rounded-xl p-6 md:p-8 max-w-3xl mt-19 max-h-[95vh] overflow-y-auto"
+        class="bg-white rounded-2xl shadow-2xl max-w-3xl mx-4 max-h-[90vh] overflow-hidden"
       >
-        <div class="flex justify-between items-start mb-4">
-          <h3 id="popupTitle" class="text-2xl md:text-3xl font-bold"></h3>
+        <!-- Header with consistent spacing -->
+        <div
+          class="flex items-center justify-between p-6 md:p-8 border-b border-gray-100"
+        >
+          <h3
+            id="popupTitle"
+            class="text-2xl md:text-3xl font-bold text-gray-900 pr-4"
+          ></h3>
           <button
             onclick="closePopup()"
-            class="text-gray-500 hover:text-black text-4xl"
+            class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-all duration-200 flex-shrink-0"
+            aria-label="Close popup"
           >
-            &times;
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </div>
 
-        <div id="popupContent" class="space-y-4">
-          <!-- Content will be inserted here by JavaScript -->
+        <!-- Content area -->
+        <div class="p-6 md:p-8 overflow-y-auto max-h-[calc(90vh-140px)]">
+          <div id="popupContent" class="space-y-4">
+            <!-- Content will be inserted here by JavaScript -->
+          </div>
         </div>
 
-        <button
-          onclick="closePopup()"
-          class="mt-4 bg-black text-white px-5 py-2 rounded-xl border-2 border-black hover:text-black hover:bg-[#ededed] transition-colors duration-300 hidden"
-        >
-          Close
-        </button>
+        <!-- Footer (optional) -->
+        <div class="p-6 md:p-8 pt-0">
+          <button
+            onclick="closePopup()"
+            class="w-full bg-gray-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors duration-200 hidden"
+          >
+            Close
+          </button>
+        </div>
       </div>
     </div>
 
