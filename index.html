@@ -816,11 +816,17 @@
         <div
           class="flex space-x-5 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory px-4"
           id="scroll-container"
+          style="
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            overscroll-behavior-x: contain;
+          "
         >
           <!-- Card 1 -->
           <div
             class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
             data-card="0"
+            style="scroll-snap-align: center; scroll-snap-stop: always"
           >
             <h3 class="text-lg font-bold mb-3 text-black">
               AI-Powered Advanced
@@ -875,7 +881,8 @@
           <!-- Card 2 -->
           <div
             class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-            data-card="1"
+            data-card="0"
+            style="scroll-snap-align: center; scroll-snap-stop: always"
           >
             <h3 class="text-lg font-bold mb-3 text-black">Fully Automatic</h3>
             <ul class="space-y-2">
@@ -925,7 +932,8 @@
           <!-- Card 3 -->
           <div
             class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-            data-card="2"
+            data-card="0"
+            style="scroll-snap-align: center; scroll-snap-stop: always"
           >
             <h3 class="text-lg font-bold mb-3 text-black">Semi-Automatic</h3>
             <ul class="space-y-2">
@@ -975,7 +983,8 @@
           <!-- Card 4 -->
           <div
             class="min-w-[85vw] max-w-xs bg-white rounded-xl shadow-lg p-5 snap-center flex-shrink-0 border border-gray-100"
-            data-card="3"
+            data-card="0"
+            style="scroll-snap-align: center; scroll-snap-stop: always"
           >
             <h3 class="text-lg font-bold mb-3 text-black">Conventional</h3>
             <ul class="space-y-2">
