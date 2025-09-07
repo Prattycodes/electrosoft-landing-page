@@ -3,12 +3,6 @@ body {
   font-family: "Rubik", sans-serif;
   hyphens: auto;
 }
-/* Hide initially on mobile */
-@media (max-width: 767px) {
-  #upper-header {
-    display: none;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -25,7 +19,6 @@ html {
   }
 }
 
-/* You can add this to your styles.css if not already present */
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none; /* Firefox */
