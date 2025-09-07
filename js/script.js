@@ -1,3 +1,4 @@
+// Open  LearnMore Popup
 function openPopup(type) {
   const popup = document.getElementById("infoPopup");
   const title = document.getElementById("popupTitle");
@@ -10,12 +11,13 @@ function openPopup(type) {
     document.body.style.overflow = "hidden";
   }
 }
-
+//Close LearnMore Popup
 function closePopup() {
   document.getElementById("infoPopup").classList.add("hidden");
   document.body.style.overflow = "auto";
 }
 
+//LearnMore Popup Content
 const popupContents = {
   AIPowered: {
     title: "Advanced Fully Automatic Transformer Test bench",
@@ -197,6 +199,7 @@ const popupContents = {
   },
 };
 
+//Mobile View Functionalities
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 800,
@@ -420,10 +423,10 @@ document.getElementById("contact-link").addEventListener("click", function (e) {
   }
 });
 
-//Client Animation JS
+//Client section Animation JS
 const carousel = document.querySelector(".animate-scroll");
 
-// Pause animation on any logo hover (existing code)
+// Pause animation on any logo hover
 const clientLogos = document.querySelectorAll(".client-logo");
 clientLogos.forEach((logo) => {
   logo.addEventListener("mouseenter", () => {
